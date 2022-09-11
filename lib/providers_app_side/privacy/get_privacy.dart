@@ -25,7 +25,7 @@ class GetPrivacy {
             (dynamic item) => PrivacyModel.fromJson(item),
           )
           .toList();
-
+ 
       return posts;
     } else {
       throw "Unable to retrieve posts.";

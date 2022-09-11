@@ -74,6 +74,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     customTextField(
                       lable: "Password",
                       controller: _password,
+                      obscureText: true,
                       hint: 'Enter your secured password',
                     ),
 
@@ -114,13 +115,23 @@ class _RegisterPageState extends State<RegisterPage> {
                     }),
                     const Divider(
                       thickness: 2,
-                      indent: 20,
+                       indent: 20,
                       endIndent: 20,
                       color: Color.fromARGB(255, 196, 196, 196),
                       height: 20,
                     ),
-                    const Text("By login you are agreeing to the"),
-                    const Text("Terms & Conditions and Privacy Policy"),
+                    const Text(
+                        "By login you are agreeing to the",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.grey
+                        )),
+                    const Text(
+                        "Terms & Conditions and Privacy Policy",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.grey
+                        )),
 
                     const SizedBox(
                       height: 5.0,
@@ -131,7 +142,13 @@ class _RegisterPageState extends State<RegisterPage> {
                         PageNavigator(ctx: context)
                             .nextPage(page: const LoginPage());
                       },
-                      child: const Text('Already have an account ? Login'),
+                      child: const Text(
+                          'Already have an account ? Login',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          color: Colors.deepPurple
+                        ),
+                      ),
                     ),
                     const SizedBox(
                       height: 5.0,

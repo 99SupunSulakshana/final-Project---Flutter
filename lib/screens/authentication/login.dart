@@ -1,6 +1,7 @@
 // ignore_for_file: unused_import
 
 import 'package:final_project/provider/AuthProvider/auth_provider.dart';
+import 'package:final_project/screens/authentication/administration.dart';
 import 'package:final_project/screens/authentication/register.dart';
 import 'package:final_project/utils/routers.dart';
 import 'package:final_project/utils/snack_message.dart';
@@ -34,6 +35,16 @@ class _LoginPageState extends State<LoginPage> {
       appBar: AppBar(
         title: const Text('Login '),
         leading: const Icon(Icons.login),
+        actions: <Widget>[
+          IconButton(
+            onPressed: () {
+              PageNavigator(ctx: context)
+                  .nextPage(page: const AdminLoginHome());
+              // _key.currentState!.openDrawer();
+            },
+            icon: const Icon(Icons.supervised_user_circle_sharp),
+          )
+        ],
       ),
       body: CustomScrollView(
         slivers: [
@@ -58,7 +69,8 @@ class _LoginPageState extends State<LoginPage> {
                     customTextField(
                       //  value: "123",
                       lable: 'Login Password',
-                      textType: TextInputType.text,
+                      textType: TextInputType.visiblePassword,
+                      obscureText: true,
                       controller: _password,
                       hint: 'Enter your secured password',
                     ),
@@ -225,11 +237,15 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     const Text(
                       "By login you are agreeing to the",
-                      style: TextStyle(color: Colors.grey),
+                      style: TextStyle(
+                          color: Colors.grey,
+                          fontWeight: FontWeight.bold),
                     ),
                     const Text(
                       "Terms & Conditions and Privacy Policy",
-                      style: TextStyle(color: Colors.grey),
+                      style: TextStyle(
+                          color: Colors.grey,
+                          fontWeight: FontWeight.bold),
                     ),
                     GestureDetector(
                       onTap: () {
@@ -238,7 +254,10 @@ class _LoginPageState extends State<LoginPage> {
                       },
                       child: const Text(
                         "Don't have an account? Register",
-                        style: TextStyle(color: Colors.black87),
+                        style: TextStyle(
+                            color: Colors.deepPurple,
+                          fontWeight: FontWeight.bold
+                        ),
                       ),
                     ),
                     const SizedBox(

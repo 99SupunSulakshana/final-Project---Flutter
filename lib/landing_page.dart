@@ -2,15 +2,18 @@
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:final_project/model/Customer.dart';
+import 'package:final_project/provider/Shared_preferences/shared_preferencesProvider.dart';
 import 'package:final_project/screens/TaskPages/service_dash.dart';
 import 'package:final_project/screens/admin/admin-dash.dart';
 import 'package:final_project/screens/advertisements/main_add.dart';
 import 'package:final_project/screens/drawer_navigation/aboutUs.dart';
-import 'package:final_project/screens/drawer_navigation/my_activation.dart';
+import 'package:final_project/screens/drawer_navigation/my_activations/ActivationHome.dart';
+import 'package:final_project/screens/drawer_navigation/my_activations/my_activation.dart';
+import 'package:final_project/screens/drawer_navigation/my_activations/my_details/my_details.dart';
 import 'package:final_project/screens/drawer_navigation/notifications.dart';
 import 'package:final_project/screens/drawer_navigation/others.dart';
 import 'package:final_project/screens/drawer_navigation/privacy_policy.dart';
-import 'package:final_project/screens/drawer_navigation/settings.dart';
+import 'package:final_project/screens/drawer_navigation/setting/settings.dart';
 import 'package:final_project/screens/drawer_navigation/terms_conditions.dart';
 import 'package:final_project/screens/popular_sec/popular_sec.dart';
 import 'package:final_project/screens/special_section/special_main.dart';
@@ -59,7 +62,6 @@ class _LandingPageState extends State<LandingPage> {
           // leading: IconButton(
           //   icon: Icon(Icons.menu_open),
           //   onPressed: () {
-
           //   },
           // ),
           actions: [
@@ -109,7 +111,7 @@ class _LandingPageState extends State<LandingPage> {
                 title: const Text('My Details'),
                 onTap: () {
                   //Navigator.pop(context);
-                  PageNavigator(ctx: context).nextPage(page: AdminDashboard());
+                  PageNavigator(ctx: context).nextPage(page: MyDetails());
                 },
               ),
               //Divider(),
@@ -119,7 +121,7 @@ class _LandingPageState extends State<LandingPage> {
                 ),
                 title: const Text('My Activations'),
                 onTap: () {
-                  PageNavigator(ctx: context).nextPage(page: MyActivation());
+                  PageNavigator(ctx: context).nextPage(page: ActivationHome());
                 },
               ),
               ListTile(
@@ -193,7 +195,8 @@ class _LandingPageState extends State<LandingPage> {
                             actions: [
                               TextButton(
                                   onPressed: () {
-                                    Navigator.pop(context);
+                                   // Navigator.pop(context);
+                                    SharedDataProvider().logOut(context);
                                   },
                                   child: const Text('YES')),
                               TextButton(

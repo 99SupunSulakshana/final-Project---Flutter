@@ -3,8 +3,7 @@
 import 'package:final_project/widgets/dialog_popular_details_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
-import '../../model/news.dart';
+import '../../../model/news.dart';
 
 class MyActivation extends StatefulWidget {
   const MyActivation({Key? key}) : super(key: key);
@@ -16,73 +15,83 @@ class MyActivation extends StatefulWidget {
 class _MyActivationState extends State<MyActivation> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("My Activations"),
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back_outlined),
-          onPressed: () {},
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text("My Activations"),
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back_outlined),
+            onPressed: () {},
+          ),
+          actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.search))],
         ),
-        actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.search))],
-      ),
-      body: Container(
-        child: SingleChildScrollView(
-          child: Column(children: <Widget>[
-            const SizedBox(
-              height: 20.0,
-            ),
-            Text(
-              "Mobitel",
-              textAlign: TextAlign.center,
-              style:
-                  GoogleFonts.dancingScript(fontSize: 25.0, color: Colors.blue),
-            ),
-            Container(
-              margin: const EdgeInsets.all(10.0),
-              padding: const EdgeInsets.all(10.0),
-              height: 500.0,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                  color: Colors.deepPurple,
-                  borderRadius: BorderRadius.circular(12.0),
-                  border: Border.all(color: Colors.white, width: 1.0),
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey.withOpacity(.5),
-                        blurRadius: 20.0,
-                        spreadRadius: 0.0,
-                        offset: const Offset(5.0, 5.0)),
-                  ]),
-              child: Mobitel_Activations(),
-            ),
-            const SizedBox(
-              height: 20.0,
-            ),
-            Text(
-              "Dialog",
-              textAlign: TextAlign.center,
-              style:
-                  GoogleFonts.dancingScript(fontSize: 25.0, color: Colors.red),
-            ),
-            Container(
-              margin: const EdgeInsets.all(10.0),
-              padding: const EdgeInsets.all(10.0),
-              height: 500.0,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                  color: Colors.deepPurple,
-                  borderRadius: BorderRadius.circular(12.0),
-                  border: Border.all(color: Colors.white, width: 1.0),
-                  boxShadow: [
-                    BoxShadow(
-                        color: Colors.grey.withOpacity(.5),
-                        blurRadius: 20.0,
-                        spreadRadius: 0.0,
-                        offset: const Offset(5.0, 5.0)),
-                  ]),
-              child: Dialog_Activation(),
-            ),
-          ]),
+        body: Container(
+          child: SingleChildScrollView(
+            child: Column(children: <Widget>[
+              const SizedBox(
+                height: 20.0,
+              ),
+              Text(
+                "Mobitel",
+                textAlign: TextAlign.center,
+                style:
+                    GoogleFonts.poppins(fontSize: 25.0, color: Colors.blue),
+              ),
+              Container(
+                margin: const EdgeInsets.all(10.0),
+                padding: const EdgeInsets.all(10.0),
+                height: 500.0,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                    color: Colors.deepPurple,
+                    borderRadius: BorderRadius.circular(12.0),
+                    border: Border.all(color: Colors.white, width: 1.0),
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.grey.withOpacity(.5),
+                          blurRadius: 20.0,
+                          spreadRadius: 0.0,
+                          offset: const Offset(5.0, 5.0)),
+                    ]),
+                child: Mobitel_Activations(),
+              ),
+              const SizedBox(
+                child: Padding(
+                  padding: EdgeInsets.all(15.0),
+                  child: Divider(
+                    color: Colors.deepPurple,
+                  ),
+                ),
+              ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              Text(
+                "Dialog",
+                textAlign: TextAlign.center,
+                style:
+                    GoogleFonts.dancingScript(fontSize: 25.0, color: Colors.red),
+              ),
+              Container(
+                margin: const EdgeInsets.all(10.0),
+                padding: const EdgeInsets.all(10.0),
+                height: 500.0,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                    color: Colors.deepPurple,
+                    borderRadius: BorderRadius.circular(12.0),
+                    border: Border.all(color: Colors.white, width: 1.0),
+                    boxShadow: [
+                      BoxShadow(
+                          color: Colors.grey.withOpacity(.5),
+                          blurRadius: 20.0,
+                          spreadRadius: 0.0,
+                          offset: const Offset(5.0, 5.0)),
+                    ]),
+                child: Dialog_Activation(),
+              ),
+            ]),
+          ),
         ),
       ),
     );

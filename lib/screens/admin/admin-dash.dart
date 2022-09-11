@@ -1,6 +1,8 @@
 // ignore_for_file: file_names
 
 import 'package:final_project/screens/TaskPages/home_page.dart';
+import 'package:final_project/screens/admin/admin-aboutus.dart';
+import 'package:final_project/screens/admin/admin_guides.dart';
 import 'package:final_project/screens/admin/admin_privacy.dart';
 import 'package:final_project/utils/routers.dart';
 import 'package:flutter/material.dart';
@@ -370,13 +372,19 @@ class _AdminDashboardState extends State<AdminDashboard> {
                       ]),
                   child: Column(
                     children: <Widget>[
-                      Text(
-                        "CUSTOMER'S GUIDES",
-                        textAlign: TextAlign.center,
-                        style: GoogleFonts.raleway(
-                            fontSize: 20.0,
-                            color: Colors.deepPurple,
-                            fontWeight: FontWeight.bold),
+                      GestureDetector(
+                        onTap:(){
+                          PageNavigator(ctx: context)
+                              .nextPage(page: const AdminGuides());
+                        },
+                        child: Text(
+                          "CUSTOMER'S GUIDES",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.raleway(
+                              fontSize: 20.0,
+                              color: Colors.deepPurple,
+                              fontWeight: FontWeight.bold),
+                        ),
                       ),
                     ],
                   )
@@ -436,13 +444,19 @@ class _AdminDashboardState extends State<AdminDashboard> {
                       ]),
                   child: Column(
                     children: <Widget>[
-                      Text(
-                        "ABOUT US INFO",
-                        textAlign: TextAlign.center,
-                        style: GoogleFonts.raleway(
-                            fontSize: 20.0,
-                            color: Colors.deepPurple,
-                            fontWeight: FontWeight.bold),
+                      GestureDetector(
+                        onTap:(){
+                          PageNavigator(ctx: context)
+                              .nextPage(page: AdminAboutUs());
+                            },
+                        child: Text(
+                          "ABOUT US INFO",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.raleway(
+                              fontSize: 20.0,
+                              color: Colors.deepPurple,
+                              fontWeight: FontWeight.bold),
+                        ),
                       ),
                     ],
                   )

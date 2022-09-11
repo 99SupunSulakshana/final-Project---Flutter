@@ -5,6 +5,8 @@ import 'package:final_project/provider/TasksProvider/add_task_provider.dart';
 import 'package:final_project/provider/AuthProvider/auth_provider.dart';
 import 'package:final_project/provider/TasksProvider/delete_task_provider.dart';
 import 'package:final_project/provider/Shared_preferences/shared_preferencesProvider.dart';
+import 'package:final_project/provider/aboutusdata.dart';
+import 'package:final_project/provider/howtoguidedata.dart';
 import 'package:final_project/splash.dart';
 import 'package:final_project/styles/colors.dart';
 import 'package:flutter/material.dart';
@@ -25,12 +27,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(
-          create: (_) => AuthenticationProvider(),
-        ),
-        ChangeNotifierProvider(
-          create: (_) => SharedDataProvider(),
-        ),
+        ChangeNotifierProvider(create: (_) => HowtoGuideData()),
+        ChangeNotifierProvider(create: (_) => AboutUsData()),
+        ChangeNotifierProvider(create: (_) => AuthenticationProvider()),
+        ChangeNotifierProvider(create: (_) => SharedDataProvider()),
         ChangeNotifierProvider(create: (_) => AddTaskProvider()),
         ChangeNotifierProvider(create: (_) => DeleteTaskProvider()),
       ],

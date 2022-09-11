@@ -10,7 +10,8 @@ Widget customTextField(
     String? lable,
     TextInputType? textType,
     TextEditingController? controller,
-    int? maxLines = 1}) {
+    int? maxLines = 1,
+    bool? obscureText}) {
   return Column(
     children: [
       Container(
@@ -26,6 +27,7 @@ Widget customTextField(
           keyboardType: textType,
           controller: controller,
           maxLines: maxLines,
+          obscureText: obscureText ?? false,
           decoration: InputDecoration(
             hintText: hint,
             labelText: lable,
