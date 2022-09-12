@@ -1,7 +1,7 @@
 // ignore_for_file: file_names
 
 import 'package:final_project/screens/TaskPages/home_page.dart';
-import 'package:final_project/screens/admin/admin-aboutus.dart';
+import 'package:final_project/screens/admin/mobitel/admin-aboutus.dart';
 import 'package:final_project/screens/admin/admin_guides.dart';
 import 'package:final_project/screens/admin/admin_privacy.dart';
 import 'package:final_project/utils/routers.dart';

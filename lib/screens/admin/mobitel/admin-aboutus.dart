@@ -1,4 +1,4 @@
-import 'package:final_project/provider/aboutusdata.dart';
+import 'package:final_project/provider/mobitel/aboutusdata.dart';
 import 'package:final_project/services/database_services.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
