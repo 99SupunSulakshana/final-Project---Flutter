@@ -6,6 +6,8 @@ import 'package:http/http.dart' as http;
 import '../model/howtoguide.dart';
 
 class GuideServices{
+
+
   static Future<HowToGuide> addGuide(String title, description) async {
     Map data = {
       "title": title,
@@ -20,10 +22,10 @@ class GuideServices{
       headers: headers,
       body: body
     );
-    if (kDebugMode) {
-      print(response.body);
-    }
-    Map responseMap = jsonDecode(response.body);
+
+    print(response.body.toString());
+
+    Map responseMap = jsonDecode(response.body.toString());
     HowToGuide howtoguide = HowToGuide.fromMap(responseMap);
 
     return howtoguide;
@@ -45,5 +47,32 @@ class GuideServices{
       howtoguides.add(howToGuide);
     }
     return howtoguides;
+  }
+
+  static Future<http.Response> updateGuide(id,title,description) async{
+    Map data = {
+      "id":id,
+      "title":title,
+      "description":description
+    };
+    var body = json.encode(data);
+    var url = Uri.parse(aboutUsUrl + '/editGuide/$id');
+    http.Response response = await http.put(
+        url,
+      headers: headers,
+      body: body
+    );
+    print(response.body);
+    return response;
+   }
+
+  static Future<http.Response> deleteTask(int id) async {
+    var url = Uri.parse(aboutUsUrl + '/deleteGuide/$id');
+    http.Response response = await http.delete(
+      url,
+      headers: headers,
+    );
+    print(response.body);
+    return response;
   }
 }

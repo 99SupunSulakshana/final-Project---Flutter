@@ -8,6 +8,7 @@ import 'package:final_project/utils/snack_message.dart';
 import 'package:final_project/widgets/button.dart';
 import 'package:final_project/widgets/text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:provider/provider.dart';
 
 class LoginPage extends StatefulWidget {
@@ -17,7 +18,29 @@ class LoginPage extends StatefulWidget {
   State<LoginPage> createState() => _LoginPageState();
 }
 
+final GoogleSignIn _googleSignIn = GoogleSignIn(
+  scopes: [
+    'email'
+  ]
+);
+
+
+
 class _LoginPageState extends State<LoginPage> {
+
+  GoogleSignInAccount? _currentUser;
+
+  @override
+  void initState(){
+    _googleSignIn.onCurrentUserChanged.listen((account) {
+      setState((){
+        _currentUser = account;
+      });
+    });
+    _googleSignIn.signInSilently();
+    super.initState();
+  }
+
   final TextEditingController _email =
       TextEditingController(text: "s@gmail.com");
   final TextEditingController _password = TextEditingController(text: "123");
@@ -31,6 +54,7 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
+    GoogleSignInAccount? user = _currentUser;
     return Scaffold(
       appBar: AppBar(
         title: const Text('Login '),
@@ -74,10 +98,10 @@ class _LoginPageState extends State<LoginPage> {
                       controller: _password,
                       hint: 'Enter your secured password',
                     ),
-                    const Text(
-                      'Frogot password ?',
-                      textAlign: TextAlign.center,
-                    ),
+                    // const Text(
+                    //   'Frogot password ?',
+                    //   textAlign: TextAlign.center,
+                    // ),
 
                     ///Button
                     Consumer<AuthenticationProvider>(
@@ -189,33 +213,32 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                         GestureDetector(
                           onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        const RegisterPage()));
+                            // Navigator.push(
+                            //     context,
+                            //     MaterialPageRoute(
+                            //         builder: (context) =>
+                            //             const RegisterPage()));
+                            signIn();
                           },
                           child: Container(
                             height: 30.0,
                             width: 30.0,
-                            child: const Icon(
-                              Icons.apple,
-                              size: 20.0,
-                              color: Colors.white,
+                            child: const Image(
+                              image: AssetImage('assets/images/google.png'),
                             ),
-                            decoration: BoxDecoration(
-                                color: Colors.deepOrange.shade900,
+                            decoration: const BoxDecoration(
+                                color: Colors.white,
                                 borderRadius:
-                                    const BorderRadius.all(Radius.circular(40)),
+                                    BorderRadius.all(Radius.circular(40)),
                                 // ignore: prefer_const_literals_to_create_immutables
                                 boxShadow: [
-                                  const BoxShadow(
+                                  BoxShadow(
                                     color: Colors.grey,
                                     offset: Offset(5.0, 5.0),
                                     blurRadius: 15.0,
                                     spreadRadius: 1.0,
                                   ),
-                                  const BoxShadow(
+                                  BoxShadow(
                                       color: Colors.white,
                                       offset: Offset(-5.0, -5.0),
                                       blurRadius: 15.0,
@@ -269,5 +292,12 @@ class _LoginPageState extends State<LoginPage> {
         ],
       ),
     );
+  }
+  Future<void> signIn() async {
+    try{
+      await _googleSignIn.signIn();
+    }catch (e){
+      print("Error Sign in $e");
+    }
   }
 }

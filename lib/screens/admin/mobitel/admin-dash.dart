@@ -2,8 +2,10 @@
 
 import 'package:final_project/screens/TaskPages/home_page.dart';
 import 'package:final_project/screens/admin/mobitel/admin-aboutus.dart';
-import 'package:final_project/screens/admin/admin_guides.dart';
-import 'package:final_project/screens/admin/admin_privacy.dart';
+import 'package:final_project/screens/admin/mobitel/guides/admin_guides.dart';
+import 'package:final_project/screens/admin/mobitel/admin_privacy.dart';
+import 'package:final_project/screens/admin/mobitel/prediction-ml/productivty/predictionHome.dart';
+import 'package:final_project/screens/admin/mobitel/special_packages/special_package_home.dart';
 import 'package:final_project/utils/routers.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -31,7 +33,7 @@ class _AdminDashboardState extends State<AdminDashboard> {
         actions: [
           IconButton(onPressed: () {}, icon: const Icon(Icons.logout_outlined))
         ],
-        elevation: 0,
+        elevation: 2 ,
       ),
       body: Container(
         decoration: const BoxDecoration(
@@ -42,6 +44,12 @@ class _AdminDashboardState extends State<AdminDashboard> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
+              const Image(
+                image: AssetImage("assets/images/mobitel.jpg"),
+                height: 200.0,
+                width: double.infinity,
+                fit: BoxFit.cover,
+              ),
               Container(
                   margin: const EdgeInsets.all(10.0),
                   padding: const EdgeInsets.all(10.0),
@@ -130,6 +138,9 @@ class _AdminDashboardState extends State<AdminDashboard> {
                   width: double.infinity,
                   decoration: BoxDecoration(
                       color: Colors.white,
+                      image: const DecorationImage(
+                        image: AssetImage("assets/images/special_offers.png"),
+                      ),
                       borderRadius: BorderRadius.circular(12.0),
                       border: Border.all(color: Colors.white, width: 1.0),
                       boxShadow: [
@@ -141,13 +152,19 @@ class _AdminDashboardState extends State<AdminDashboard> {
                       ]),
                   child: Column(
                     children: <Widget>[
-                      Text(
-                        "SPECIAL PACKAGES",
-                        textAlign: TextAlign.center,
-                        style: GoogleFonts.raleway(
-                            fontSize: 20.0,
-                            color: Colors.deepPurple,
-                            fontWeight: FontWeight.bold),
+                      GestureDetector(
+                        onTap:(){
+                          PageNavigator(ctx: context)
+                              .nextPage(page: const SpecialPackagesHome());
+                        },
+                        child: Text(
+                          "SPECIAL PACKAGES",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.raleway(
+                              fontSize: 20.0,
+                              color: Colors.deepPurple,
+                              fontWeight: FontWeight.bold),
+                        ),
                       ),
                     ],
                   )
@@ -163,6 +180,9 @@ class _AdminDashboardState extends State<AdminDashboard> {
                   width: double.infinity,
                   decoration: BoxDecoration(
                       color: Colors.white,
+                      image: const DecorationImage(
+                        image: AssetImage("assets/images/best_image.png"),
+                      ),
                       borderRadius: BorderRadius.circular(12.0),
                       border: Border.all(color: Colors.white, width: 1.0),
                       boxShadow: [
@@ -196,6 +216,9 @@ class _AdminDashboardState extends State<AdminDashboard> {
                   width: double.infinity,
                   decoration: BoxDecoration(
                       color: Colors.white,
+                      image: const DecorationImage(
+                        image: AssetImage("assets/images/customer_packages.png"),
+                      ),
                       borderRadius: BorderRadius.circular(12.0),
                       border: Border.all(color: Colors.white, width: 1.0),
                       boxShadow: [
@@ -229,6 +252,9 @@ class _AdminDashboardState extends State<AdminDashboard> {
                   width: double.infinity,
                   decoration: BoxDecoration(
                       color: Colors.white,
+                      image: const DecorationImage(
+                        image: AssetImage("assets/images/customer_services.png"),
+                      ),
                       borderRadius: BorderRadius.circular(12.0),
                       border: Border.all(color: Colors.white, width: 1.0),
                       boxShadow: [
@@ -262,6 +288,9 @@ class _AdminDashboardState extends State<AdminDashboard> {
                   width: double.infinity,
                   decoration: BoxDecoration(
                       color: Colors.white,
+                      image: const DecorationImage(
+                        image: AssetImage("assets/images/loan.png"),
+                      ),
                       borderRadius: BorderRadius.circular(12.0),
                       border: Border.all(color: Colors.white, width: 1.0),
                       boxShadow: [
@@ -295,6 +324,9 @@ class _AdminDashboardState extends State<AdminDashboard> {
                   width: double.infinity,
                   decoration: BoxDecoration(
                       color: Colors.white,
+                      image: const DecorationImage(
+                        image: AssetImage("assets/images/offers.png"),
+                      ),
                       borderRadius: BorderRadius.circular(12.0),
                       border: Border.all(color: Colors.white, width: 1.0),
                       boxShadow: [
@@ -328,6 +360,9 @@ class _AdminDashboardState extends State<AdminDashboard> {
                   width: double.infinity,
                   decoration: BoxDecoration(
                       color: Colors.white,
+                      image: const DecorationImage(
+                        image: AssetImage("assets/images/codes.png"),
+                      ),
                       borderRadius: BorderRadius.circular(12.0),
                       border: Border.all(color: Colors.white, width: 1.0),
                       boxShadow: [
@@ -361,6 +396,9 @@ class _AdminDashboardState extends State<AdminDashboard> {
                   width: double.infinity,
                   decoration: BoxDecoration(
                       color: Colors.white,
+                      image: const DecorationImage(
+                        image: AssetImage("assets/images/guides.png"),
+                      ),
                       borderRadius: BorderRadius.circular(12.0),
                       border: Border.all(color: Colors.white, width: 1.0),
                       boxShadow: [
@@ -400,6 +438,9 @@ class _AdminDashboardState extends State<AdminDashboard> {
                   width: double.infinity,
                   decoration: BoxDecoration(
                       color: Colors.white,
+                      image: const DecorationImage(
+                        image: AssetImage("assets/images/terms.png"),
+                      ),
                       borderRadius: BorderRadius.circular(12.0),
                       border: Border.all(color: Colors.white, width: 1.0),
                       boxShadow: [
@@ -433,6 +474,9 @@ class _AdminDashboardState extends State<AdminDashboard> {
                   width: double.infinity,
                   decoration: BoxDecoration(
                       color: Colors.white,
+                      image: const DecorationImage(
+                        image: AssetImage("assets/images/aboutUs.png"),
+                      ),
                       borderRadius: BorderRadius.circular(12.0),
                       border: Border.all(color: Colors.white, width: 1.0),
                       boxShadow: [
@@ -472,6 +516,9 @@ class _AdminDashboardState extends State<AdminDashboard> {
                   width: double.infinity,
                   decoration: BoxDecoration(
                       color: Colors.white,
+                      image: const DecorationImage(
+                        image: AssetImage("assets/images/payment.png"),
+                      ),
                       borderRadius: BorderRadius.circular(12.0),
                       border: Border.all(color: Colors.white, width: 1.0),
                       boxShadow: [
@@ -505,6 +552,9 @@ class _AdminDashboardState extends State<AdminDashboard> {
                   width: double.infinity,
                   decoration: BoxDecoration(
                       color: Colors.white,
+                      image: const DecorationImage(
+                        image: AssetImage("assets/images/transaction.png"),
+                      ),
                       borderRadius: BorderRadius.circular(12.0),
                       border: Border.all(color: Colors.white, width: 1.0),
                       boxShadow: [
@@ -538,6 +588,9 @@ class _AdminDashboardState extends State<AdminDashboard> {
                   width: double.infinity,
                   decoration: BoxDecoration(
                       color: Colors.white,
+                      image: const DecorationImage(
+                        image: AssetImage("assets/images/news.png"),
+                      ),
                       borderRadius: BorderRadius.circular(12.0),
                       border: Border.all(color: Colors.white, width: 1.0),
                       boxShadow: [
@@ -571,6 +624,9 @@ class _AdminDashboardState extends State<AdminDashboard> {
                   width: double.infinity,
                   decoration: BoxDecoration(
                       color: Colors.white,
+                      image: const DecorationImage(
+                        image: AssetImage("assets/images/users.png"),
+                      ),
                       borderRadius: BorderRadius.circular(12.0),
                       border: Border.all(color: Colors.white, width: 1.0),
                       boxShadow: [

@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../model/AboutUs.dart';
-import '../provider/aboutusdata.dart';
+import '../provider/mobitel/aboutusdata.dart';
 
 class AboutUsTile extends StatelessWidget {
   final AboutUs aboutUs;

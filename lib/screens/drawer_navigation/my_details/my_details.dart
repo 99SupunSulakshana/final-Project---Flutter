@@ -1,8 +1,5 @@
 // ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors_in_immutables
 
-import 'package:final_project/screens/drawer_navigation/my_activations/my_details/dialog_credit_balance.dart';
-import 'package:final_project/screens/drawer_navigation/my_activations/my_details/dialog_data_balance.dart';
-import 'package:final_project/screens/drawer_navigation/my_activations/my_details/mobitel_credit_balance.dart';
 import 'package:final_project/screens/drawer_navigation/setting/settings.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';

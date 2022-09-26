@@ -18,7 +18,7 @@ class _SubTabsState extends State<SubTabs> {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return DefaultTabController(
-      length: 3,
+      length: 2,
       child: Scaffold(
           body: Padding(
         padding: const EdgeInsets.all(5.0),
@@ -39,9 +39,7 @@ class _SubTabsState extends State<SubTabs> {
                       text: "Popular",
                     ),
                     Tab(text: "Trending"),
-                    Tab(
-                      text: "Recommanded",
-                    ),
+
                   ]),
             ),
             SizedBox(
@@ -71,18 +69,18 @@ class _SubTabsState extends State<SubTabs> {
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: Colors.black26,
-                        borderRadius: BorderRadius.circular(10.0)),
-                    child: const Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: DialogRecommandations(),
-                    ),
-                  ),
-                )
+                // Padding(
+                //   padding: const EdgeInsets.all(8.0),
+                //   child: Container(
+                //     decoration: BoxDecoration(
+                //         color: Colors.black26,
+                //         borderRadius: BorderRadius.circular(10.0)),
+                //     child: const Padding(
+                //       padding: EdgeInsets.all(8.0),
+                //       child: DialogRecommandations(),
+                //     ),
+                //   ),
+                // )
               ]),
             )
           ],

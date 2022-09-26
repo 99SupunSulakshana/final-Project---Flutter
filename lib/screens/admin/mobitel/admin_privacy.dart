@@ -9,8 +9,8 @@ import 'package:final_project/utils/routers.dart';
 import 'package:final_project/screens/TaskPages/Local_Widgets/task_field.dart';
 import 'package:flutter/material.dart';
 
-import '../../model/task_model.dart';
-import '../../provider/TasksProvider/get_task.dart';
+import '../../../model/task_model.dart';
+import '../../../provider/TasksProvider/get_task.dart';
 
 class PrivacyAdminPage extends StatefulWidget {
   PrivacyAdminPage({Key? key}) : super(key: key);

@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../utils/routers.dart';
-import '../../../setting/settings.dart';
+import '../../setting/settings.dart';
 
 class MobitelSignUpDetails extends StatelessWidget {
   const MobitelSignUpDetails({Key? key}) : super(key: key);

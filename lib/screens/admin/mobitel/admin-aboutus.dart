@@ -4,8 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../ListTiles/aboutUs_tiles.dart';
-import '../../model/AboutUs.dart';
+import '../../../model/AboutUs.dart';
 
 class AdminAboutUs extends StatefulWidget {
   const AdminAboutUs({Key? key}) : super(key: key);

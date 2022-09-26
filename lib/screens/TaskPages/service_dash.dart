@@ -61,7 +61,7 @@ class _DashBoardCustomState extends State<DashBoardCustom> {
                   ),
                 ),
                 Text(
-                  "Hi\nSupun",
+                  "Hi\n Customer",
                   style: Theme.of(context).textTheme.displaySmall?.copyWith(
                       fontWeight: FontWeight.bold, color: Colors.white),
                 ),

@@ -1,7 +1,7 @@
 import 'package:final_project/services/database_services.dart';
 import 'package:flutter/cupertino.dart';
 
-import '../model/AboutUs.dart';
+import '../../model/AboutUs.dart';
 
 class AboutUsData extends ChangeNotifier {
   List<AboutUs> aboutUss = [];

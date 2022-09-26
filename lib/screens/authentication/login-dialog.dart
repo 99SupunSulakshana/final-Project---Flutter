@@ -1,3 +1,4 @@
+import 'package:final_project/screens/admin/dialog/admin-dash-dialog.dart';
 import 'package:final_project/screens/authentication/register.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -51,7 +52,7 @@ class _LoginDialogState extends State<LoginDialog> {
                     flex: 4,
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
-                          vertical: 40.0, horizontal: 24.0
+                          vertical: 36.0, horizontal: 24.0
                       ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.end,
@@ -145,7 +146,8 @@ class _LoginDialogState extends State<LoginDialog> {
                                 width: double.infinity,
                                 child: RaisedButton(
                                   onPressed: (){
-
+                                    PageNavigator(ctx: context)
+                                        .nextPage(page: const DialogAdminDash());
                                   },
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(25)

@@ -1,3 +1,4 @@
+import 'package:final_project/screens/admin/mobitel/admin-dash.dart';
 import 'package:final_project/screens/authentication/register.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -145,7 +146,8 @@ class _LoginMobitelState extends State<LoginMobitel> {
                             width: double.infinity,
                             child: RaisedButton(
                               onPressed: (){
-
+                                PageNavigator(ctx: context)
+                                    .nextPage(page: const AdminDashboard());
                               },
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(25)

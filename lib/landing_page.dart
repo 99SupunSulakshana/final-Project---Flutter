@@ -4,12 +4,12 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:final_project/model/Customer.dart';
 import 'package:final_project/provider/Shared_preferences/shared_preferencesProvider.dart';
 import 'package:final_project/screens/TaskPages/service_dash.dart';
-import 'package:final_project/screens/admin/admin-dash.dart';
+import 'package:final_project/screens/admin/mobitel/admin-dash.dart';
 import 'package:final_project/screens/advertisements/main_add.dart';
 import 'package:final_project/screens/drawer_navigation/aboutUs.dart';
 import 'package:final_project/screens/drawer_navigation/my_activations/ActivationHome.dart';
 import 'package:final_project/screens/drawer_navigation/my_activations/my_activation.dart';
-import 'package:final_project/screens/drawer_navigation/my_activations/my_details/my_details.dart';
+import 'package:final_project/screens/drawer_navigation/my_details/my_details.dart';
 import 'package:final_project/screens/drawer_navigation/notifications.dart';
 import 'package:final_project/screens/drawer_navigation/others.dart';
 import 'package:final_project/screens/drawer_navigation/privacy_policy.dart';
@@ -484,12 +484,12 @@ class _LandingPageState extends State<LandingPage> {
                             child: Row(
                               children: const <Widget>[
                                 Icon(
-                                  Icons.assistant_outlined,
+                                  Icons.code_sharp,
                                   color: Colors.deepPurple,
                                   size: 40.0,
                                 ),
                                 SpecialServices(
-                                  title: "D Assists",
+                                  title: "Hot-Lines",
                                   subtitle: "Dialog & Mobitel",
                                 )
                               ],
