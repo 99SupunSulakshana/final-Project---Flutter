@@ -6,8 +6,11 @@ import 'package:final_project/provider/AuthProvider/auth_provider.dart';
 import 'package:final_project/provider/TasksProvider/delete_task_provider.dart';
 import 'package:final_project/provider/Shared_preferences/shared_preferencesProvider.dart';
 import 'package:final_project/provider/mobitel/aboutusdata.dart';
+import 'package:final_project/provider/mobitel/advertisementdata.dart';
 import 'package:final_project/provider/mobitel/howtoguidedata.dart';
 import 'package:final_project/provider/mobitel/machine_learning/productivityData.dart';
+import 'package:final_project/provider/mobitel/privacydata.dart';
+import 'package:final_project/provider/mobitel/termsData.dart';
 import 'package:final_project/splash.dart';
 import 'package:final_project/styles/colors.dart';
 import 'package:flutter/material.dart';
@@ -34,7 +37,10 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => SharedDataProvider()),
         ChangeNotifierProvider(create: (_) => AddTaskProvider()),
         ChangeNotifierProvider(create: (_) => DeleteTaskProvider()),
-        ChangeNotifierProvider(create: (_) => ProductivityData())
+        ChangeNotifierProvider(create: (_) => ProductivityData()),
+        ChangeNotifierProvider(create: (_) => AdvertisementData()),
+        ChangeNotifierProvider(create: (_) => PrivacyData()),
+        ChangeNotifierProvider(create: (_) => TermsData())
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

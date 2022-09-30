@@ -1,11 +1,3 @@
-// ignore_for_file: non_constant_identifier_names
-
-import 'dart:convert';
-
-PrivacyModel privacyModelFromJson(String str) =>
-    PrivacyModel.fromJson(json.decode(str));
-
-String privacyModelToJson(PrivacyModel data) => json.encode(data.toJson());
 
 class PrivacyModel {
   PrivacyModel({

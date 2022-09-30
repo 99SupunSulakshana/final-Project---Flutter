@@ -5,7 +5,7 @@ import 'package:final_project/model/Customer.dart';
 import 'package:final_project/provider/Shared_preferences/shared_preferencesProvider.dart';
 import 'package:final_project/screens/TaskPages/service_dash.dart';
 import 'package:final_project/screens/admin/mobitel/admin-dash.dart';
-import 'package:final_project/screens/advertisements/main_add.dart';
+import 'package:final_project/screens/admin/mobitel/advertisements/main_add.dart';
 import 'package:final_project/screens/drawer_navigation/aboutUs.dart';
 import 'package:final_project/screens/drawer_navigation/my_activations/ActivationHome.dart';
 import 'package:final_project/screens/drawer_navigation/my_activations/my_activation.dart';

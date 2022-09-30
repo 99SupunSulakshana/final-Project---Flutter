@@ -1,6 +1,7 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class PopularCard extends StatelessWidget {
   final String Img;
@@ -56,6 +57,7 @@ class PopularCard extends StatelessWidget {
                   border: Border.all(
                     //color: Colors.grey,
                     width: 1,
+                    color: Colors.white
                   ),
                   // borderRadius: BorderRadius.circular(20.0),
                   image: DecorationImage(
@@ -75,7 +77,7 @@ class PopularCard extends StatelessWidget {
                 left: 8,
                 child: Text(
                   title,
-                  style: const TextStyle(color: Colors.white),
+                  style: GoogleFonts.poppins(color: Colors.white, fontWeight: FontWeight.bold),
                 ),
               )
             ],
@@ -86,8 +88,8 @@ class PopularCard extends StatelessWidget {
           Text(Description + "...",
               maxLines: 3,
               textAlign: TextAlign.justify,
-              style: const TextStyle(
-                  fontSize: 15.0, fontWeight: FontWeight.normal)),
+              style: GoogleFonts.poppins(
+                  fontSize: 13.0, fontWeight: FontWeight.normal, color: Colors.grey[700])),
         ],
       ),
     );

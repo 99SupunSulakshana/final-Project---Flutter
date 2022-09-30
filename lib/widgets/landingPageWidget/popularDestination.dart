@@ -26,7 +26,7 @@ class ReturenCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(12.0),
       ),
       child: Container(
-        height: 190,
+        height: 220,
         width: 150,
         decoration: BoxDecoration(
           color: Colors.white,
@@ -68,13 +68,13 @@ class ReturenCard extends StatelessWidget {
                 //     width: 1,
                 //   ),
                 // ),
-                color: Colors.deepPurple,
+                color: Colors.white,
                 child: Text(
                   provider,
                   textAlign: TextAlign.center,
-                  style: GoogleFonts.dancingScript(
+                  style: GoogleFonts.poppins(
                       fontSize: 15.0,
-                      color: Colors.white,
+                      color: Colors.deepPurple,
                       fontWeight: FontWeight.bold),
                 ),
               ),
@@ -95,10 +95,10 @@ class ReturenCard extends StatelessWidget {
               Text(
                 title,
                 textAlign: TextAlign.center,
-                style: GoogleFonts.dancingScript(
-                    fontSize: 15.0,
+                style: GoogleFonts.poppins(
+                    fontSize: 13.0,
                     color: Colors.deepPurple,
-                    fontWeight: FontWeight.bold),
+                    fontWeight: FontWeight.normal),
               ),
               FlatButton(
                 padding: EdgeInsets.all(5.0),

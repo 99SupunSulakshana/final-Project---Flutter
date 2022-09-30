@@ -17,7 +17,7 @@ class _AboutUsState extends State<AboutUs> {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return DefaultTabController(
-      length: 3,
+      length: 2,
       child: Scaffold(
         appBar: AppBar(
           title: const Text("About Us"),
@@ -26,7 +26,7 @@ class _AboutUsState extends State<AboutUs> {
             onPressed: () {},
           ),
           actions: [
-            IconButton(onPressed: () {}, icon: const Icon(Icons.search))
+            // IconButton(onPressed: () {}, icon: const Icon(Icons.search))
           ],
         ),
         body: Stack(children: <Widget>[
@@ -94,9 +94,9 @@ class _AboutUsState extends State<AboutUs> {
                           Tab(
                             text: "Mobitel",
                           ),
-                          Tab(
-                            text: "Application",
-                          )
+                          // Tab(
+                          //   text: "Application",
+                          // )
                         ]),
                   ),
                 ),
@@ -124,15 +124,15 @@ class _AboutUsState extends State<AboutUs> {
                           borderRadius: BorderRadius.circular(10.0)),
                       child: const MobitelAbout(),
                     ),
-                    Container(
-                      height: size.height * .90,
-                      width: 100,
-                      margin: const EdgeInsets.only(top: 10.0),
-                      decoration: BoxDecoration(
-                          color: Colors.black12,
-                          borderRadius: BorderRadius.circular(10.0)),
-                      child: const ApplicationAbout(),
-                    ),
+                    // Container(
+                    //   height: size.height * .90,
+                    //   width: 100,
+                    //   margin: const EdgeInsets.only(top: 10.0),
+                    //   decoration: BoxDecoration(
+                    //       color: Colors.black12,
+                    //       borderRadius: BorderRadius.circular(10.0)),
+                    //   child: const ApplicationAbout(),
+                    // ),
                   ]),
                 )
               ]),
