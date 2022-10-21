@@ -48,8 +48,9 @@ dependencies:
   introduction_screen: ^3.0.1
   url_launcher: ^6.1.5
   jiffy: ^5.0.0
-
-
+  dropdown_textfield: ^1.0.5
+  searchfield: ^0.7.0
+  textfield_search: ^0.10.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -106,6 +107,10 @@ flutter:
    - assets/images/intro02.png
    - assets/images/intro03.png
    - assets/images/privacy.png
+   - assets/images/user.png
+   - assets/images/doctors.png
+   - assets/images/hospital.png
+   - assets/images/nurse.png
    
 
 

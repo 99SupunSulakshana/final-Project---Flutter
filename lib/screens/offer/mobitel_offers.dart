@@ -4,6 +4,7 @@ import 'package:final_project/model/news.dart';
 import 'package:final_project/utils/routers.dart';
 import 'package:final_project/widgets/dialog_popular_details_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MobitelOffers extends StatefulWidget {
   const MobitelOffers({
@@ -32,19 +33,19 @@ class _MobitelOffersState extends State<MobitelOffers> {
                     margin: const EdgeInsets.all(10.0),
                     padding: const EdgeInsets.all(7.0),
                     decoration: BoxDecoration(
-                        color: Colors.deepPurple,
-                        borderRadius: BorderRadius.circular(12.0),
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(30.0),
                         boxShadow: [
                           BoxShadow(
-                              color: Colors.grey.withOpacity(.5),
-                              blurRadius: 20.0,
+                              color: Colors.black.withOpacity(.5),
+                              blurRadius: 10.0,
                               spreadRadius: 0.0,
                               offset: const Offset(5.0, 5.0)),
                         ]),
                     child: const Center(
-                        // child: Image(
-                        //   image: NetworkImage(popularList[index].image),
-                        // ),
+                        child: Image(
+                          image: AssetImage('assets/images/mobitel.jpg'),
+                        ),
                         //child: Text('${popularList[index]}'),
                         ),
                   ),
@@ -54,7 +55,7 @@ class _MobitelOffersState extends State<MobitelOffers> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const <Widget>[
                         Text(
-                          "Terms and Conditions 01",
+                          "Offer With Mobitel",
                           textDirection: TextDirection.ltr,
                           style: TextStyle(
                               fontSize: 15.0,
@@ -92,13 +93,21 @@ class _MobitelOffersState extends State<MobitelOffers> {
                       showDialog(
                           context: context,
                           builder: (context) => AlertDialog(
-                                title: const Text(
-                                  'Term & Condition 01',
+                                title: Text(
+                                  'OFFER DETAILS - MOBITEL',
+                                  style: GoogleFonts.poppins(fontWeight: FontWeight.bold, color: Colors.pink),
                                   textAlign: TextAlign.justify,
                                 ),
                                 content: SingleChildScrollView(
                                     child: Text(popularList[index].content)),
                                 actions: [
+                                  TextButton(
+                                      onPressed: () {
+                                        Navigator.pop(context);
+                                      },
+                                      child: Text('GET OFFER',
+                                        style: GoogleFonts.poppins(fontWeight: FontWeight.bold, color: Colors.green),),
+                                   ),
                                   TextButton(
                                       onPressed: () {
                                         Navigator.pop(context);

@@ -4,6 +4,7 @@ import 'package:final_project/model/news.dart';
 import 'package:final_project/utils/routers.dart';
 import 'package:final_project/widgets/dialog_popular_details_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class DialogOffers extends StatefulWidget {
   const DialogOffers({
@@ -32,8 +33,8 @@ class _DialogOffersState extends State<DialogOffers> {
                     margin: const EdgeInsets.all(10.0),
                     padding: const EdgeInsets.all(7.0),
                     decoration: BoxDecoration(
-                        color: Colors.deepPurple,
-                        borderRadius: BorderRadius.circular(12.0),
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(30.0),
                         boxShadow: [
                           BoxShadow(
                               color: Colors.grey.withOpacity(.5),
@@ -42,10 +43,10 @@ class _DialogOffersState extends State<DialogOffers> {
                               offset: const Offset(5.0, 5.0)),
                         ]),
                     child: const Center(
-                        // child: Image(
-                        //   image: NetworkImage(popularList[index].image),
-                        // ),
-                        //child: Text('${popularList[index]}'),
+                        child: Image(
+                          image: AssetImage('assets/images/dialog.jpg'),
+                          fit: BoxFit.cover,
+                        ),
                         ),
                   ),
                   Expanded(
@@ -54,7 +55,7 @@ class _DialogOffersState extends State<DialogOffers> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const <Widget>[
                         Text(
-                          "Terms and Conditions 01",
+                          "Dialog - offers",
                           textDirection: TextDirection.ltr,
                           style: TextStyle(
                               fontSize: 15.0,
@@ -92,13 +93,21 @@ class _DialogOffersState extends State<DialogOffers> {
                       showDialog(
                           context: context,
                           builder: (context) => AlertDialog(
-                                title: const Text(
-                                  'Term & Condition 01',
-                                  textAlign: TextAlign.justify,
+                                title: Text(
+                                  'DIALOG OFFER INFORMATIONS',
+                                  style: GoogleFonts.poppins(fontWeight: FontWeight.bold, color: Colors.pink),
+                                  textAlign: TextAlign.start,
                                 ),
                                 content: SingleChildScrollView(
                                     child: Text(popularList[index].content)),
                                 actions: [
+                                  TextButton(
+                                    onPressed: () {
+                                      Navigator.pop(context);
+                                    },
+                                    child: Text('GET OFFER',
+                                      style: GoogleFonts.poppins(fontWeight: FontWeight.bold, color: Colors.green),),
+                                  ),
                                   TextButton(
                                       onPressed: () {
                                         Navigator.pop(context);

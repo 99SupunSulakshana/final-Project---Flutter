@@ -17,10 +17,7 @@ class _MobitelSettingsState extends State<MobitelSettings> {
       child: Scaffold(
           appBar: AppBar(
             title: const Text("Mobitel Settings"),
-            leading: IconButton(
-              icon: const Icon(Icons.arrow_back_outlined),
-              onPressed: () {},
-            ),
+          centerTitle: true,
           //  actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.search))],
           ),
           body: Container(

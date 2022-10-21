@@ -25,12 +25,8 @@ class _MyDetailsState extends State<MyDetails> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("My Deatails"),
+          title: const Text("My Details"),
           centerTitle: true,
-          leading: IconButton(
-            icon: const Icon(Icons.arrow_back_outlined),
-            onPressed: () {},
-          ),
           actions: [],
         ),
         body: Container(
@@ -38,9 +34,10 @@ class _MyDetailsState extends State<MyDetails> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: <Widget>[
+                const SizedBox(height: 20.0),
                 SizedBox(
                   child: Text(
-                    "Credit Balance",
+                    "Sim Cards Balance",
                     textAlign: TextAlign.center,
                     style:
                     GoogleFonts.poppins(fontSize: 20.0, color: Colors.black),
@@ -92,57 +89,6 @@ class _MyDetailsState extends State<MyDetails> {
                 const SizedBox(
                   height: 20.0,
                 ),
-                SizedBox(
-                  child: Text(
-                    "Data Balance",
-                    textAlign: TextAlign.center,
-                    style:
-                    GoogleFonts.poppins(fontSize: 20.0, color: Colors.black),
-                  ),
-                ),
-                const Padding(
-                  padding: EdgeInsets.all(15.0),
-                  child: Divider(
-                    color: Colors.black,
-                  ),
-                ),
-                Container(
-                    margin: const EdgeInsets.all(10.0),
-                    padding: const EdgeInsets.all(10.0),
-                    height: 180.0,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                        color: Colors.pink,
-                        borderRadius: BorderRadius.circular(12.0),
-                        border: Border.all(color: Colors.white, width: 1.0),
-                        boxShadow: [
-                          BoxShadow(
-                               color: Colors.grey.withOpacity(.5),
-                              blurRadius: 20.0,
-                              spreadRadius: 0.0,
-                              offset: const Offset(5.0, 5.0)),
-                        ]),
-                    child: const MobitelDataBalance()),
-                const SizedBox(
-                  height: 20.0,
-                ),
-                Container(
-                    margin: const EdgeInsets.all(10.0),
-                    padding: const EdgeInsets.all(10.0),
-                    height: 180.0,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                        color: Colors.deepPurple,
-                        borderRadius: BorderRadius.circular(12.0),
-                        border: Border.all(color: Colors.white, width: 1.0),
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.grey.withOpacity(.5),
-                              blurRadius: 20.0,
-                              spreadRadius: 0.0,
-                              offset: const Offset(5.0, 5.0)),
-                        ]),
-                    child: const DialogDataBalance()),
                 const SizedBox(
                   height: 20.0,
                 ),

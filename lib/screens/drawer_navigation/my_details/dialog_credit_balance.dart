@@ -30,10 +30,6 @@ class _DialogCreditBalanceState extends State<DialogCreditBalance> {
           appBar: AppBar(
               title: const Text("Dialog Credit Balance"),
               centerTitle: true,
-              leading: IconButton(
-                icon: const Icon(Icons.arrow_back_outlined),
-                onPressed: () {},
-              ),
               actions: []
           ),
           body: Center(

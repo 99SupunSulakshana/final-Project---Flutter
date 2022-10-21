@@ -124,7 +124,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                           width: 100,
                           margin: const EdgeInsets.only(top: 10.0),
                           decoration: BoxDecoration(
-                              color: Colors.black12,
+                              color: Colors.white,
                               borderRadius: BorderRadius.circular(10.0)),
                           child: const MobitelSubTabs(),
                         )

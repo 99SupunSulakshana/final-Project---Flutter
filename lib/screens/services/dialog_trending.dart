@@ -30,8 +30,8 @@ class _DialogTrendingListSState extends State<DialogTrendingListS> {
                     margin: const EdgeInsets.all(10.0),
                     padding: const EdgeInsets.all(7.0),
                     decoration: BoxDecoration(
-                        color: Colors.deepPurple,
-                        borderRadius: BorderRadius.circular(12.0),
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(30.0),
                         boxShadow: [
                           BoxShadow(
                               color: Colors.grey.withOpacity(.5),
@@ -39,9 +39,9 @@ class _DialogTrendingListSState extends State<DialogTrendingListS> {
                               spreadRadius: 0.0,
                               offset: const Offset(5.0, 5.0)),
                         ]),
-                    child: Center(
+                    child: const Center(
                       child: Image(
-                        image: NetworkImage(popularList[index].image),
+                        image: AssetImage('assets/images/dialog.jpg'),
                       ),
                     ),
                   ),
@@ -51,7 +51,7 @@ class _DialogTrendingListSState extends State<DialogTrendingListS> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const <Widget>[
                         Text(
-                          "New What's App package",
+                          "New service",
                           textDirection: TextDirection.ltr,
                           style: TextStyle(
                               fontSize: 15.0,

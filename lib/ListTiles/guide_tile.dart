@@ -5,6 +5,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../utils/snack_message.dart';
+
 class GuideTile extends StatelessWidget {
   final HowToGuide howToGuide;
   final HowtoGuideData howtoGuideData;
@@ -18,9 +20,9 @@ class GuideTile extends StatelessWidget {
     return ListTile(
       onTap: onTap,
       visualDensity: const VisualDensity(vertical: 4),
-        leading: CircleAvatar(
-            backgroundColor: const Color(0xff764abc),
-          child: Text(howToGuide.id.toString())
+        leading: const Padding(
+          padding: EdgeInsets.all(8.0),
+          child: Icon(Icons.album, color: Colors.pink,size: 25.0,),
         ),
         title: Text(
           howToGuide.title,
@@ -35,6 +37,9 @@ class GuideTile extends StatelessWidget {
           onPressed: () {
           //  tasksData.deleteTask(task);
             howtoGuideData.deleteGuides(howToGuide);
+            showMessage(
+                message: "Guide deleted successfully !",
+                context: context);
           },
         ),
       selected: true,

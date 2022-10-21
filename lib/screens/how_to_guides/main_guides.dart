@@ -24,13 +24,7 @@ class _GuidesState extends State<Guides> {
       child: Scaffold(
         appBar: AppBar(
           title: const Text("Network Guide Services"),
-          leading: IconButton(
-            icon: const Icon(Icons.arrow_back_outlined),
-            onPressed: () {},
-          ),
-          actions: [
-            // IconButton(onPressed: (){}, icon: const Icon(Icons.search))
-          ],
+          actions: [],
         ),
         body: Stack(children: <Widget>[
           Container(

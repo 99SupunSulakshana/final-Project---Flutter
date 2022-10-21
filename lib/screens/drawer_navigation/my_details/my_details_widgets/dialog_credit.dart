@@ -1,4 +1,6 @@
 
+import 'package:final_project/screens/drawer_navigation/my_details/reload/realod_home.dart';
+import 'package:final_project/screens/drawer_navigation/my_details/transactions/transaction_home.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -47,7 +49,7 @@ class DialogBalance extends StatelessWidget {
                 minimumSize: const Size(100, 40), //////// HERE
               ),
               onPressed: () {
-                PageNavigator(ctx: context).nextPage(page: DialogCreditBalance());
+                PageNavigator(ctx: context).nextPage(page: TransactionHome());
               },
               child: const Text('Transactions'),
             ),
@@ -64,7 +66,9 @@ class DialogBalance extends StatelessWidget {
                     borderRadius: BorderRadius.circular(32.0)),
                 minimumSize: const Size(100, 40), //////// HERE
               ),
-              onPressed: () {},
+              onPressed: () {
+                PageNavigator(ctx: context).nextPage(page: ReloadHome());
+              },
               child: const Text('Reload'),
             ),
             const SizedBox(

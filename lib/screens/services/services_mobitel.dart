@@ -21,7 +21,7 @@ class _MobitelServicesState extends State<MobitelServices> {
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return DefaultTabController(
-      length: 3,
+      length: 2,
       child: Scaffold(
           body: Padding(
         padding: const EdgeInsets.all(5.0),
@@ -42,9 +42,6 @@ class _MobitelServicesState extends State<MobitelServices> {
                       text: "Popular",
                     ),
                     Tab(text: "Trending"),
-                    Tab(
-                      text: "Recommanded",
-                    ),
                   ]),
             ),
             SizedBox(
@@ -54,7 +51,7 @@ class _MobitelServicesState extends State<MobitelServices> {
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
                     decoration: BoxDecoration(
-                        color: Colors.black26,
+                        color: Colors.white,
                         borderRadius: BorderRadius.circular(10.0)),
                     child: const Padding(
                       padding: EdgeInsets.all(8.0),
@@ -66,7 +63,7 @@ class _MobitelServicesState extends State<MobitelServices> {
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
                     decoration: BoxDecoration(
-                        color: Colors.black26,
+                        color: Colors.white,
                         borderRadius: BorderRadius.circular(10.0)),
                     child: const Padding(
                       padding: EdgeInsets.all(8.0),
@@ -74,18 +71,6 @@ class _MobitelServicesState extends State<MobitelServices> {
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                    decoration: BoxDecoration(
-                        color: Colors.black26,
-                        borderRadius: BorderRadius.circular(10.0)),
-                    child: const Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: MobitelRecommandationSList(),
-                    ),
-                  ),
-                )
               ]),
             )
           ],

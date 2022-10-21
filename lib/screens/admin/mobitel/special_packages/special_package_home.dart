@@ -19,7 +19,7 @@ class _SpecialPackagesHomeState extends State<SpecialPackagesHome> {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.deepPurple,
-          foregroundColor: Colors.white60,
+          foregroundColor: Colors.white,
           title: Text(
             "Special packages",
             textDirection: TextDirection.ltr,
@@ -31,7 +31,7 @@ class _SpecialPackagesHomeState extends State<SpecialPackagesHome> {
             IconButton(onPressed: () {
               PageNavigator(ctx: context)
                   .nextPage(page: MLHome());
-            }, icon: const Icon(Icons.album)),
+            }, icon: const Icon(Icons.calculate_outlined, color: Colors.white,)),
             IconButton(onPressed: () {}, icon: const Icon(Icons.logout_outlined)),
           ],
           elevation: 0 ,

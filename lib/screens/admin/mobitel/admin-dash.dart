@@ -4,10 +4,12 @@ import 'package:final_project/screens/TaskPages/home_page.dart';
 import 'package:final_project/screens/admin/mobitel/admin-aboutus.dart';
 import 'package:final_project/screens/admin/mobitel/guides/admin_guides.dart';
 import 'package:final_project/screens/admin/mobitel/admin_privacy.dart';
+import 'package:final_project/screens/admin/mobitel/hotlines/hotline_main.dart';
 import 'package:final_project/screens/admin/mobitel/prediction-ml/productivty/predictionHome.dart';
 import 'package:final_project/screens/admin/mobitel/privacy/privacyMain.dart';
 import 'package:final_project/screens/admin/mobitel/special_packages/special_package_home.dart';
 import 'package:final_project/screens/admin/mobitel/terms&conditions/termsMain.dart';
+import 'package:final_project/screens/admin/mobitel/weekly_packages/weekly_main.dart';
 import 'package:final_project/utils/routers.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -129,13 +131,19 @@ class _AdminDashboardState extends State<AdminDashboard> {
                           PageNavigator(ctx: context)
                               .nextPage(page: PrivacyAdminPage());
                         },
-                        child: Text(
-                          "WEEKLY CUSTOMER'S PACKAGES",
-                          textAlign: TextAlign.center,
-                          style: GoogleFonts.raleway(
-                              fontSize: 20.0,
-                              color: Colors.deepPurple,
-                              fontWeight: FontWeight.bold),
+                        child: GestureDetector(
+                          onTap: (){
+                            PageNavigator(ctx: context)
+                                .nextPage(page: WeeklyMain());
+                          },
+                          child: Text(
+                            "WEEKLY CUSTOMER'S PACKAGES",
+                            textAlign: TextAlign.center,
+                            style: GoogleFonts.raleway(
+                                fontSize: 20.0,
+                                color: Colors.deepPurple,
+                                fontWeight: FontWeight.bold),
+                          ),
                         ),
                       ),
                     ],
@@ -388,13 +396,19 @@ class _AdminDashboardState extends State<AdminDashboard> {
                       ]),
                   child: Column(
                     children: <Widget>[
-                      Text(
-                        "CONNECTION CODES",
-                        textAlign: TextAlign.center,
-                        style: GoogleFonts.raleway(
-                            fontSize: 20.0,
-                            color: Colors.deepPurple,
-                            fontWeight: FontWeight.bold),
+                      GestureDetector(
+                        onTap:(){
+                          PageNavigator(ctx: context)
+                              .nextPage(page: const HotCodesMain());
+                        },
+                        child: Text(
+                          "CONNECTION CODES",
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.raleway(
+                              fontSize: 20.0,
+                              color: Colors.deepPurple,
+                              fontWeight: FontWeight.bold),
+                        ),
                       ),
                     ],
                   )

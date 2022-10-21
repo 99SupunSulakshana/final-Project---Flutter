@@ -32,10 +32,6 @@ class _MobitelCreditBalanceState extends State<MobitelCreditBalance> {
           appBar: AppBar(
               title: const Text("Mobitel Credit Balance"),
               centerTitle: true,
-              leading: IconButton(
-                icon: const Icon(Icons.arrow_back_outlined),
-                onPressed: () {},
-              ),
               actions: []
           ),
         body: Center(

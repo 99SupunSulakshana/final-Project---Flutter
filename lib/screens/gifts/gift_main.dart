@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../model/news.dart';
 import '../../widgets/dialog_popular_details_screen.dart';
+import 'mobitel_gift.dart';
 
 class Gift extends StatefulWidget {
   const Gift({Key? key}) : super(key: key);
@@ -17,31 +18,45 @@ class _GiftState extends State<Gift> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Weekly Special Gift Packages"),
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back_outlined),
-          onPressed: () {},
-        ),
+        // leading: IconButton(
+        //   icon: const Icon(Icons.arrow_back_outlined),
+        //   onPressed: () {},
+        // ),
         actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.search))],
       ),
       body: Container(
         child: SingleChildScrollView(
-          child: Column(children: <Widget>[
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
             const SizedBox(
               height: 20.0,
             ),
+            const SizedBox(
+                height: 200,
+                width: 300,
+                child: Image(
+                    image: AssetImage("assets/images/png10.png")
+                )),
             Text(
-              "Dialog",
+              "Dialog Weekly Gifts",
               textAlign: TextAlign.center,
               style:
-                  GoogleFonts.dancingScript(fontSize: 25.0, color: Colors.red),
+                  GoogleFonts.poppins(fontSize: 25.0, color: Colors.red),
             ),
+                Text(
+                  "The person who gifts data needs to have a sufficient data balance in their prepaid account. After gifting data, there has to be a minimum data balance of 50MB in the Gifting person's account.",
+                  textAlign: TextAlign.center,
+                  style:
+                  GoogleFonts.poppins(fontSize: 13.0, color: Colors.black54),
+                ),
             Container(
-              margin: const EdgeInsets.all(10.0),
+              margin: const EdgeInsets.all(20.0),
               padding: const EdgeInsets.all(10.0),
               height: 500.0,
               width: double.infinity,
               decoration: BoxDecoration(
-                  color: Colors.deepPurple,
+                  color: Colors.white,
                   borderRadius: BorderRadius.circular(12.0),
                   border: Border.all(color: Colors.white, width: 1.0),
                   boxShadow: [
@@ -57,18 +72,24 @@ class _GiftState extends State<Gift> {
               height: 20.0,
             ),
             Text(
-              "Mobitel",
+              "Mobitel Weekly Gifts",
               textAlign: TextAlign.center,
               style:
-                  GoogleFonts.dancingScript(fontSize: 25.0, color: Colors.blue),
+                  GoogleFonts.poppins(fontSize: 25.0, color: Colors.blue),
             ),
+                Text(
+                  "The person who gifts data needs to have a sufficient data balance in their prepaid account. After gifting data, there has to be a minimum data balance of 50MB in the Gifting person's account.",
+                  textAlign: TextAlign.center,
+                  style:
+                  GoogleFonts.poppins(fontSize: 13.0, color: Colors.black54),
+                ),
             Container(
-              margin: const EdgeInsets.all(10.0),
+              margin: const EdgeInsets.all(20.0),
               padding: const EdgeInsets.all(10.0),
               height: 500.0,
               width: double.infinity,
               decoration: BoxDecoration(
-                  color: Colors.deepPurple,
+                  color: Colors.white,
                   borderRadius: BorderRadius.circular(12.0),
                   border: Border.all(color: Colors.white, width: 1.0),
                   boxShadow: [
@@ -78,7 +99,7 @@ class _GiftState extends State<Gift> {
                         spreadRadius: 0.0,
                         offset: const Offset(5.0, 5.0)),
                   ]),
-              child: Mobitel_List(),
+              child: const MobitelGifts(),
             ),
           ]),
         ),
@@ -93,6 +114,7 @@ ListView Dialog_List() {
     itemBuilder: (context, index) {
       News news = popularList[index];
       return Card(
+        elevation: 0,
         child: ListTile(
           title: Row(
             children: <Widget>[
@@ -195,6 +217,7 @@ ListView Mobitel_List() {
     itemBuilder: (context, index) {
       News news = popularList[index];
       return Card(
+        elevation: 0,
         child: ListTile(
           title: Row(
             children: <Widget>[

@@ -17,10 +17,7 @@ class _DialogSettingsState extends State<DialogSettings> {
       child: Scaffold(
           appBar: AppBar(
             title: const Text("Dialog Settings"),
-            leading: IconButton(
-              icon: const Icon(Icons.arrow_back_outlined),
-              onPressed: () {},
-            ),
+           centerTitle: true,
            // actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.search))],
           ),
           body: Container(

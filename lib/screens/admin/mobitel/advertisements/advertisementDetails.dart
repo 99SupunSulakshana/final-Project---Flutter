@@ -136,10 +136,10 @@ class AddDetails extends StatelessWidget {
     showDialog(
         context: context,
         builder: (context) => AlertDialog(
-          title: const Text(
+          title: Text(
             'Advertisement - update',
             textAlign: TextAlign.justify,
-
+            style: GoogleFonts.poppins(color: Colors.green),
           ),
           content: SingleChildScrollView(
               child: Column(

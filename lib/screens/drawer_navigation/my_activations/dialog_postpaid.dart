@@ -19,11 +19,7 @@ class _DialogPostPaidScreenState extends State<DialogPostPaidScreen> {
       child: Scaffold(
           appBar: AppBar(
             title: const Text("Dialog postpaid activations"),
-            leading: IconButton(
-              icon: const Icon(Icons.arrow_back_outlined),
-              onPressed: () {},
-            ),
-            actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.search))],
+            centerTitle: true,
           ),
           body: Container(
             child: SingleChildScrollView(

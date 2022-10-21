@@ -32,10 +32,6 @@ class _MobitelDataState extends State<MobitelData> {
         appBar: AppBar(
             title: const Text("Mobitel Data Balance"),
             centerTitle: true,
-            leading: IconButton(
-              icon: const Icon(Icons.arrow_back_outlined),
-              onPressed: () {},
-            ),
             actions: []
         ),
         body: Center(

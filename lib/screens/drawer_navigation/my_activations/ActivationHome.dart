@@ -23,10 +23,6 @@ class _ActivationHomeState extends State<ActivationHome> {
           appBar: AppBar(
             title: const Text("My Activations"),
             centerTitle: true,
-            leading: IconButton(
-              icon: const Icon(Icons.arrow_back_outlined),
-              onPressed: () {},
-            ),
             actions: [
          //     IconButton(onPressed: () {}, icon: const Icon(Icons.search))
 
@@ -40,7 +36,7 @@ class _ActivationHomeState extends State<ActivationHome> {
                 children: [
                   SizedBox(
                     child: Text(
-                      "Dialog postpaid activations",
+                      "Dialog activations",
                       textAlign: TextAlign.center,
                       style:
                       GoogleFonts.poppins(fontSize: 20.0, color: Colors.red),
@@ -72,43 +68,13 @@ class _ActivationHomeState extends State<ActivationHome> {
                   const SizedBox(
                     height: 20.0,
                   ),
-                  SizedBox(
-                    child: Text(
-                      "Dialog prepaid activations",
-                      textAlign: TextAlign.center,
-                      style:
-                      GoogleFonts.poppins(fontSize: 20.0, color: Colors.red),
-                    ),
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.all(15.0),
-                    child: Divider(
-                      color: Colors.red,
-                    ),
-                  ),
-                  Container(
-                      margin: const EdgeInsets.all(10.0),
-                      padding: const EdgeInsets.all(10.0),
-                      height: 160.0,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                          color: Colors.red,
-                          borderRadius: BorderRadius.circular(12.0),
-                          border: Border.all(color: Colors.white, width: 1.0),
-                          boxShadow: [
-                            BoxShadow(
-                                color: Colors.grey.withOpacity(.5),
-                                blurRadius: 20.0,
-                                spreadRadius: 0.0,
-                                offset: const Offset(5.0, 5.0)),
-                          ]),
-                      child: const DialogPrePaid()),
+
                   const SizedBox(
                     height: 20.0,
                   ),
                   SizedBox(
                     child: Text(
-                      "Mobitel postpaid activations",
+                      "Mobitel activations",
                       textAlign: TextAlign.center,
                       style:
                       GoogleFonts.poppins(fontSize: 20.0, color: Colors.blue),
@@ -137,97 +103,12 @@ class _ActivationHomeState extends State<ActivationHome> {
                                 offset: const Offset(5.0, 5.0)),
                           ]),
                       child: const MobitelPostPaid()),
-                  SizedBox(
-                    child: Text(
-                      "Mobitel prepaid activations",
-                      textAlign: TextAlign.center,
-                      style:
-                      GoogleFonts.poppins(fontSize: 20.0, color: Colors.blue),
-                    ),
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.all(15.0),
-                    child: Divider(
-                      color: Colors.blue,
-                    ),
-                  ),
-                  Container(
-                      margin: const EdgeInsets.all(10.0),
-                      padding: const EdgeInsets.all(10.0),
-                      height: 160.0,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                          color: Colors.blue,
-                          borderRadius: BorderRadius.circular(12.0),
-                          border: Border.all(color: Colors.white, width: 1.0),
-                          boxShadow: [
-                            BoxShadow(
-                                color: Colors.grey.withOpacity(.5),
-                                blurRadius: 20.0,
-                                spreadRadius: 0.0,
-                                offset: const Offset(5.0, 5.0)),
-                          ]),
-                      child: const MobitelActivationPre()),
+
                 ],
             ),
           ),
         ),
       ),
-    );
-  }
-}
-
-class MobitelActivationPre extends StatelessWidget {
-  const MobitelActivationPre({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: <Widget>[
-        Text(
-          "Mobitel Pre-Paid Activations",
-          textAlign: TextAlign.center,
-          style: GoogleFonts.raleway(fontSize: 20.0, color: Colors.white),
-        ),
-        Text(
-          "071 1327510",
-          textAlign: TextAlign.center,
-          style: GoogleFonts.raleway(fontSize: 20.0, color: Colors.white),
-        ),
-        Text(
-          "Activated packages : 03",
-          textAlign: TextAlign.center,
-          style: GoogleFonts.raleway(fontSize: 20.0, color: Colors.white),
-        ),
-        const SizedBox(
-          height: 20.0,
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                primary: Colors.deepOrange,
-                onPrimary: Colors.white,
-                shadowColor: Colors.greenAccent,
-                elevation: 3,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(32.0)),
-                minimumSize: const Size(100, 40), //////// HERE
-              ),
-              onPressed: () {
-                PageNavigator(ctx: context).nextPage(page: MobitelPrePaidScreen());
-              },
-              child: const Text(
-                  'View More >>>',
-              style: TextStyle(fontSize: 15.0),),
-            ),
-          ],
-        )
-      ],
     );
   }
 }
@@ -243,17 +124,17 @@ class MobitelPostPaid extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         Text(
-          "Mobitel Post-Paid Activations",
+          "Mobitel Activations",
           textAlign: TextAlign.center,
           style: GoogleFonts.raleway(fontSize: 20.0, color: Colors.white),
         ),
         Text(
-          "071 1327510",
+          "071 1327518",
           textAlign: TextAlign.center,
           style: GoogleFonts.raleway(fontSize: 20.0, color: Colors.white),
         ),
         Text(
-          "Activated packages : 11",
+          "Activated packages : 2",
           textAlign: TextAlign.center,
           style: GoogleFonts.raleway(fontSize: 20.0, color: Colors.white),
         ),
@@ -297,12 +178,12 @@ class DialogPostPaid extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         Text(
-          "Dialog Post-Paid Activations",
+          "Dialog Activations",
           textAlign: TextAlign.center,
           style: GoogleFonts.raleway(fontSize: 20.0, color: Colors.white),
         ),
         Text(
-          "071 1327510",
+          "077 1327510",
           textAlign: TextAlign.center,
           style: GoogleFonts.raleway(fontSize: 20.0, color: Colors.white),
         ),
@@ -319,7 +200,7 @@ class DialogPostPaid extends StatelessWidget {
           children: <Widget>[
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                primary: Colors.deepOrange,
+                primary: Colors.blue,
                 onPrimary: Colors.white,
                 shadowColor: Colors.greenAccent,
                 elevation: 3,
@@ -339,59 +220,4 @@ class DialogPostPaid extends StatelessWidget {
     );
   }
 }
-
-class DialogPrePaid extends StatelessWidget {
-  const DialogPrePaid({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: <Widget>[
-        Text(
-          "Dialog Pre-Paid Activations",
-          textAlign: TextAlign.center,
-          style: GoogleFonts.raleway(fontSize: 20.0, color: Colors.white),
-        ),
-        Text(
-          "071 1327510",
-          textAlign: TextAlign.center,
-          style: GoogleFonts.raleway(fontSize: 20.0, color: Colors.white),
-        ),
-        Text(
-          "Activated packages : 11",
-          textAlign: TextAlign.center,
-          style: GoogleFonts.raleway(fontSize: 20.0, color: Colors.white),
-        ),
-        const SizedBox(
-          height: 20.0,
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                primary: Colors.deepOrange,
-                onPrimary: Colors.white,
-                shadowColor: Colors.greenAccent,
-                elevation: 3,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(32.0)),
-                minimumSize: const Size(100, 40), //////// HERE
-              ),
-              onPressed: () {
-                PageNavigator(ctx: context).nextPage(page: DialogPrePaidScreen());
-              },
-              child: const Text('View More >>>'),
-            ),
-
-          ],
-        )
-      ],
-    );
-  }
-}
-
 

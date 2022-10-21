@@ -31,10 +31,6 @@ class _DialogDataState extends State<DialogData> {
           appBar: AppBar(
               title: const Text("Dialog Data Balance"),
               centerTitle: true,
-              leading: IconButton(
-                icon: const Icon(Icons.arrow_back_outlined),
-                onPressed: () {},
-              ),
               actions: []
           ),
           body: Center(

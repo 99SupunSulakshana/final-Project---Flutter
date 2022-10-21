@@ -14,10 +14,7 @@ class _SpecialSecState extends State<SpecialSec> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Special Section"),
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back_outlined),
-          onPressed: () {},
-        ),
+        centerTitle: true,
         actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.search))],
       ),
       body: Container(
@@ -27,10 +24,10 @@ class _SpecialSecState extends State<SpecialSec> {
               height: 20.0,
             ),
             Text(
-              "Dialog",
+              "Dialog customer specials( )",
               textAlign: TextAlign.center,
               style:
-                  GoogleFonts.dancingScript(fontSize: 25.0, color: Colors.red),
+                  GoogleFonts.aBeeZee(fontSize: 25.0, color: Colors.red, fontWeight: FontWeight.w900),
             ),
             Container(
               margin: const EdgeInsets.all(10.0),
@@ -38,13 +35,13 @@ class _SpecialSecState extends State<SpecialSec> {
               height: 500.0,
               width: double.infinity,
               decoration: BoxDecoration(
-                  color: Colors.deepPurple,
+                  color: Colors.white,
                   borderRadius: BorderRadius.circular(12.0),
                   border: Border.all(color: Colors.white, width: 1.0),
                   boxShadow: [
                     BoxShadow(
-                        color: Colors.grey.withOpacity(.5),
-                        blurRadius: 20.0,
+                        color: Colors.black.withOpacity(.5),
+                        blurRadius: 30.0,
                         spreadRadius: 0.0,
                         offset: const Offset(5.0, 5.0)),
                   ]),
@@ -54,10 +51,10 @@ class _SpecialSecState extends State<SpecialSec> {
               height: 20.0,
             ),
             Text(
-              "Mobitel",
+              "Mobitel customer specials( )",
               textAlign: TextAlign.center,
               style:
-                  GoogleFonts.dancingScript(fontSize: 25.0, color: Colors.blue),
+                  GoogleFonts.aBeeZee(fontSize: 25.0, color: Colors.blue, fontWeight: FontWeight.bold),
             ),
             Container(
               margin: const EdgeInsets.all(10.0),
@@ -65,18 +62,21 @@ class _SpecialSecState extends State<SpecialSec> {
               height: 500.0,
               width: double.infinity,
               decoration: BoxDecoration(
-                  color: Colors.deepPurple,
+                  color: Colors.white,
                   borderRadius: BorderRadius.circular(12.0),
                   border: Border.all(color: Colors.white, width: 1.0),
                   boxShadow: [
                     BoxShadow(
                         color: Colors.grey.withOpacity(.5),
-                        blurRadius: 20.0,
+                        blurRadius: 30.0,
                         spreadRadius: 0.0,
                         offset: const Offset(5.0, 5.0)),
                   ]),
               child: Mobitel_List(),
             ),
+            SizedBox(
+              height: 30,
+            )
           ]),
         ),
       ),
@@ -97,13 +97,13 @@ ListView Dialog_List() {
                 height: 60.0,
                 width: 60.0,
                 margin: const EdgeInsets.all(10.0),
-                padding: const EdgeInsets.all(7.0),
+                padding: const EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
-                    color: Colors.deepPurple,
+                    color: Colors.red,
                     borderRadius: BorderRadius.circular(12.0),
                     boxShadow: [
                       BoxShadow(
-                          color: Colors.grey.withOpacity(.5),
+                          color: Colors.black.withOpacity(.5),
                           blurRadius: 20.0,
                           spreadRadius: 0.0,
                           offset: const Offset(5.0, 5.0)),
@@ -201,7 +201,7 @@ ListView Mobitel_List() {
                 margin: const EdgeInsets.all(10.0),
                 padding: const EdgeInsets.all(7.0),
                 decoration: BoxDecoration(
-                    color: Colors.deepPurple,
+                    color: Colors.lightBlue,
                     borderRadius: BorderRadius.circular(12.0),
                     boxShadow: [
                       BoxShadow(

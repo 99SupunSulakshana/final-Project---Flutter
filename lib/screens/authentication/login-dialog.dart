@@ -108,7 +108,7 @@ class _LoginDialogState extends State<LoginDialog> {
                     flex: 8,
                     child: Container(
                       width: double.infinity,
-                      height: double.infinity,
+                      height: MediaQuery.of(context).size.height * 0.7,
                       decoration: const BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.only(

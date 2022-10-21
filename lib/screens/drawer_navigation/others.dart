@@ -18,12 +18,8 @@ class _OthersState extends State<Others> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Add To List"),
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back_outlined),
-          onPressed: () {},
-        ),
-        actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.search))],
+        title: const Text("Waiting list"),
+        centerTitle: true,
       ),
       body: Container(
         child: SingleChildScrollView(
@@ -32,10 +28,10 @@ class _OthersState extends State<Others> {
               height: 20.0,
             ),
             Text(
-              "Dialog",
+              "Waiting list with Dialog",
               textAlign: TextAlign.center,
               style:
-                  GoogleFonts.dancingScript(fontSize: 25.0, color: Colors.red),
+                  GoogleFonts.aBeeZee(fontSize: 25.0, color: Colors.red),
             ),
             Container(
               margin: const EdgeInsets.all(10.0),
@@ -43,7 +39,7 @@ class _OthersState extends State<Others> {
               height: 500.0,
               width: double.infinity,
               decoration: BoxDecoration(
-                  color: Colors.deepPurple,
+                  color: Colors.white,
                   borderRadius: BorderRadius.circular(12.0),
                   border: Border.all(color: Colors.white, width: 1.0),
                   boxShadow: [
@@ -59,10 +55,10 @@ class _OthersState extends State<Others> {
               height: 20.0,
             ),
             Text(
-              "Mobitel",
+              "Waiting list with Mobitel",
               textAlign: TextAlign.center,
               style:
-                  GoogleFonts.dancingScript(fontSize: 25.0, color: Colors.blue),
+                  GoogleFonts.aBeeZee(fontSize: 25.0, color: Colors.blue),
             ),
             Container(
               margin: const EdgeInsets.all(10.0),
@@ -70,7 +66,7 @@ class _OthersState extends State<Others> {
               height: 500.0,
               width: double.infinity,
               decoration: BoxDecoration(
-                  color: Colors.deepPurple,
+                  color: Colors.white,
                   borderRadius: BorderRadius.circular(12.0),
                   border: Border.all(color: Colors.white, width: 1.0),
                   boxShadow: [

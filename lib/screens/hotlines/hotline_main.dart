@@ -20,10 +20,7 @@ class _HotLinesState extends State<HotLines> {
       child: Scaffold(
         appBar: AppBar(
           title: const Text("Hot Connections Numbers"),
-          leading: IconButton(
-            icon: const Icon(Icons.arrow_back_outlined),
-            onPressed: () {},
-          ),
+
           actions: [
             // IconButton(onPressed: (){}, icon: const Icon(Icons.search))
           ],
@@ -34,7 +31,7 @@ class _HotLinesState extends State<HotLines> {
             decoration: const BoxDecoration(
                 color: Colors.white,
                 image: DecorationImage(
-                    image: AssetImage("assets/images/png01.png"))),
+                    image: AssetImage("assets/images/codes.png"))),
           ),
           Padding(
             padding:
@@ -44,28 +41,6 @@ class _HotLinesState extends State<HotLines> {
                 const SizedBox(
                   height: 150.0,
                 ),
-                // Container(
-                //   margin: const EdgeInsets.only(bottom: 20.0),
-                //   padding: const EdgeInsets.symmetric(
-                //       horizontal: 30, vertical: 3.0),
-                //   decoration: BoxDecoration(
-                //       color: Colors.black12,
-                //       boxShadow: const [
-                //         BoxShadow(
-                //           offset: Offset(0, 17),
-                //           blurRadius: 17.0,
-                //           spreadRadius: -23,
-                //           color: Colors.grey,
-                //         ),
-                //       ],
-                //       borderRadius: BorderRadius.circular(30.0)),
-                //   child: const TextField(
-                //     decoration: InputDecoration(
-                //         hintText: "Search Here",
-                //         icon: Icon(Icons.search),
-                //         border: InputBorder.none),
-                //   ),
-                // ),
                 Container(
                   height: 50.0,
                   decoration: BoxDecoration(
@@ -102,7 +77,7 @@ class _HotLinesState extends State<HotLines> {
                     SingleChildScrollView(
                       child: Container(
                         height: size.height * .90,
-                        width: 100,
+                        width: double.infinity,
                         margin: const EdgeInsets.only(top: 10.0),
                         decoration: BoxDecoration(
                             color: Colors.black12,
@@ -113,7 +88,7 @@ class _HotLinesState extends State<HotLines> {
                     ),
                     Container(
                       height: size.height * .90,
-                      width: 100,
+                      width: double.infinity,
                       margin: const EdgeInsets.only(top: 10.0),
                       decoration: BoxDecoration(
                           color: Colors.black12,

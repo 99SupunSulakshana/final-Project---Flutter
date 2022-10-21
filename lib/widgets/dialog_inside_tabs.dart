@@ -49,7 +49,7 @@ class _SubTabsState extends State<SubTabs> {
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
                     decoration: BoxDecoration(
-                        color: Colors.black26,
+                        color: Colors.white,
                         borderRadius: BorderRadius.circular(10.0)),
                     child: const Padding(
                       padding: EdgeInsets.all(8.0),
@@ -61,7 +61,7 @@ class _SubTabsState extends State<SubTabs> {
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
                     decoration: BoxDecoration(
-                        color: Colors.black26,
+                        color: Colors.white,
                         borderRadius: BorderRadius.circular(10.0)),
                     child: const Padding(
                       padding: EdgeInsets.all(8.0),

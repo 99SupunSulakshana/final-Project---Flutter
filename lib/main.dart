@@ -7,10 +7,13 @@ import 'package:final_project/provider/TasksProvider/delete_task_provider.dart';
 import 'package:final_project/provider/Shared_preferences/shared_preferencesProvider.dart';
 import 'package:final_project/provider/mobitel/aboutusdata.dart';
 import 'package:final_project/provider/mobitel/advertisementdata.dart';
+import 'package:final_project/provider/mobitel/hotcodesdata.dart';
 import 'package:final_project/provider/mobitel/howtoguidedata.dart';
 import 'package:final_project/provider/mobitel/machine_learning/productivityData.dart';
 import 'package:final_project/provider/mobitel/privacydata.dart';
 import 'package:final_project/provider/mobitel/termsData.dart';
+import 'package:final_project/provider/mobitel/userinfodata.dart';
+import 'package:final_project/provider/mobitel/weeklyPackageData.dart';
 import 'package:final_project/splash.dart';
 import 'package:final_project/styles/colors.dart';
 import 'package:flutter/material.dart';
@@ -40,7 +43,10 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => ProductivityData()),
         ChangeNotifierProvider(create: (_) => AdvertisementData()),
         ChangeNotifierProvider(create: (_) => PrivacyData()),
-        ChangeNotifierProvider(create: (_) => TermsData())
+        ChangeNotifierProvider(create: (_) => TermsData()),
+        ChangeNotifierProvider(create: (_) => HotCodesData()),
+        ChangeNotifierProvider(create: (_) => WeeklyPackageData()),
+        ChangeNotifierProvider(create: (_) => UserInfoData())
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

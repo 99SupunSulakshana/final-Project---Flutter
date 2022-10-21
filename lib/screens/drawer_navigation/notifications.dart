@@ -13,11 +13,7 @@ class _ActivationsState extends State<Activations> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Notifications"),
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back_outlined),
-          onPressed: () {},
-        ),
-        actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.search))],
+        centerTitle: true,
       ),
     );
   }

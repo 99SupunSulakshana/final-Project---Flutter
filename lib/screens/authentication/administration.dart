@@ -1,6 +1,7 @@
 import 'package:final_project/screens/authentication/login-mobitel.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../../utils/routers.dart';
 import '../TaskPages/service_dash.dart';
@@ -53,12 +54,15 @@ class _AdminLoginHomeState extends State<AdminLoginHome> {
                     Padding(
                       padding: const EdgeInsets.all(15.0),
                       child: Card(
-                        elevation: 50,
+                        elevation: 10,
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30)
+                        ),
                         shadowColor: Colors.black,
                         color: Colors.white,
                         child: SizedBox(
                           width: 300,
-                          height: 380,
+                          height: 382,
                           child: Padding(
                             padding: const EdgeInsets.all(20.0),
                             child: Column(
@@ -77,9 +81,9 @@ class _AdminLoginHomeState extends State<AdminLoginHome> {
                                 const SizedBox(
                                   height: 10,
                                 ), //SizedBox
-                                const Text(
-                                  'Dialog',
-                                  style: TextStyle(
+                                Text(
+                                  'Dialog Service',
+                                  style: GoogleFonts.dancingScript(
                                     fontSize: 30,
                                     color: Colors.red,
                                     fontWeight: FontWeight.w500,
@@ -122,7 +126,10 @@ class _AdminLoginHomeState extends State<AdminLoginHome> {
                 Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: Card(
-                    elevation: 50,
+                    elevation: 10,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30)
+                    ),
                     shadowColor: Colors.black,
                     color: Colors.white,
                     child: SizedBox(
@@ -146,9 +153,9 @@ class _AdminLoginHomeState extends State<AdminLoginHome> {
                             const SizedBox(
                               height: 10,
                             ), //SizedBox
-                            const Text(
-                              'Mobitel',
-                              style: TextStyle(
+                            Text(
+                              'Mobitel Service',
+                              style: GoogleFonts.dancingScript(
                                 fontSize: 30,
                                 color: Colors.blue,
                                 fontWeight: FontWeight.w500,

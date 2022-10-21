@@ -41,10 +41,6 @@ class _SettingsState extends State<Settings> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Settings"),
-        leading: IconButton(
-          icon: const Icon(Icons.arrow_back_outlined),
-          onPressed: () {},
-        ),
        centerTitle: true,
        // actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.search))],
       ),

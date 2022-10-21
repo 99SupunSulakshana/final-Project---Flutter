@@ -15,6 +15,11 @@ import 'package:final_project/screens/drawer_navigation/others.dart';
 import 'package:final_project/screens/drawer_navigation/privacy_policy.dart';
 import 'package:final_project/screens/drawer_navigation/setting/settings.dart';
 import 'package:final_project/screens/drawer_navigation/terms_conditions.dart';
+import 'package:final_project/screens/eChanneling/echannelingMain.dart';
+import 'package:final_project/screens/hotlines/hotline_main.dart';
+import 'package:final_project/screens/loan_services/loan_main.dart';
+import 'package:final_project/screens/payment/intro_payments.dart';
+import 'package:final_project/screens/payment/paymentMain.dart';
 import 'package:final_project/screens/popular_sec/popular_sec.dart';
 import 'package:final_project/screens/special_section/special_main.dart';
 import 'package:final_project/utils/routers.dart';
@@ -40,8 +45,6 @@ class _LandingPageState extends State<LandingPage> {
   final GlobalKey<ScaffoldState> _key = GlobalKey();
   // var currentPage = DrawerSections.dashboard;
   final List<String> imgList = [
-    // 'https://ichef.bbci.co.uk/news/1024/branded_news/55A2/production/_112422912_tv061593010.jpg',
-    // 'https://ichef.bbci.co.uk/news/1024/branded_news/55A2/production/_112422912_tv061593010.jpg',
     'assets/images/mobitel.jpg',
     'assets/images/dialog.jpg'
   ];
@@ -65,28 +68,6 @@ class _LandingPageState extends State<LandingPage> {
           //   },
           // ),
           actions: [
-            Stack(
-              children: <Widget>[
-                Positioned(
-                  //  top: 0.0,
-                  child: IconButton(
-                      onPressed: () {
-                        //SharedDataProvider().logOut(context);
-                      },
-                      icon: Icon(Icons.notifications_active)),
-                ),
-                Positioned(
-                  top: 0,
-                  right: 285,
-                  child: CircleAvatar(
-                    radius: 16,
-                    backgroundColor: Colors.red,
-                    foregroundColor: Colors.white,
-                    child: Text('24'),
-                  ), //CircularAvatar
-                ),
-              ],
-            ),
             IconButton(
               onPressed: () {
                 PageNavigator(ctx: context)
@@ -278,14 +259,6 @@ class _LandingPageState extends State<LandingPage> {
                 Container(
                   margin: const EdgeInsets.only(right: 10.0),
                   alignment: Alignment.topRight,
-                  child: GestureDetector(
-                    onTap: () {
-                      PageNavigator(ctx: context)
-                          .nextPage(page: const Addvertisement());
-                    },
-                    child: Text('More',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
-                  ),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -315,9 +288,9 @@ class _LandingPageState extends State<LandingPage> {
                   margin: EdgeInsets.all(10.0),
                   padding: EdgeInsets.all(10.0),
                   width: double.infinity,
-                  height: 60.0,
+                  height: 70.0,
                   decoration: BoxDecoration(
-                      color: Colors.deepPurple,
+                      color: Colors.pink,
                       borderRadius: BorderRadius.circular(10.0),
                       boxShadow: [
                         BoxShadow(
@@ -332,13 +305,13 @@ class _LandingPageState extends State<LandingPage> {
                     },
                     child: Text.rich(TextSpan(
                       text: "Weekly Specials Mobitel & Dialog\n",
-                      style: TextStyle(color: Colors.white),
+                      style: GoogleFonts.poppins(color: Colors.white),
                       // ignore: prefer_const_literals_to_create_immutables
                       children: [
                         TextSpan(
                           text: "Get SPECIAL GIFT Packs",
                           style: TextStyle(
-                              fontSize: 15.0, fontWeight: FontWeight.bold),
+                              fontSize: 18.0, fontWeight: FontWeight.bold),
                         )
                       ],
                     )),
@@ -346,7 +319,7 @@ class _LandingPageState extends State<LandingPage> {
                 ),
                 Container(
                     margin: const EdgeInsets.only(
-                        left: 5.0, bottom: 10.0, right: 12.0),
+                        left: 5.0, bottom: 10.0, right: 12.0, top: 20.0),
                     alignment: Alignment.topLeft,
                     child: const SpecialServices(
                       title: "Application's Main Services",
@@ -377,15 +350,21 @@ class _LandingPageState extends State<LandingPage> {
                                       offset: Offset(5.0, 5.0)),
                                 ]),
                             child: Row(
-                              children: const <Widget>[
+                              children: <Widget>[
                                 Icon(
                                   Icons.payment,
                                   color: Colors.deepPurple,
                                   size: 40.0,
                                 ),
-                                SpecialServices(
-                                  title: "Payment",
-                                  subtitle: "Dialog & Mobitel",
+                                GestureDetector(
+                                  onTap: (){
+                                    PageNavigator(ctx: context)
+                                        .nextPage(page: PaymentsIntro());
+                                  },
+                                  child: SpecialServices(
+                                    title: "Payment",
+                                    subtitle: "Dialog & Mobitel",
+                                  ),
                                 )
                               ],
                             ),
@@ -409,15 +388,21 @@ class _LandingPageState extends State<LandingPage> {
                                       offset: Offset(5.0, 5.0)),
                                 ]),
                             child: Row(
-                              children: const <Widget>[
+                              children: <Widget>[
                                 Icon(
                                   Icons.medical_services,
                                   color: Colors.deepPurple,
                                   size: 40.0,
                                 ),
-                                SpecialServices(
-                                  title: "eChanneling",
-                                  subtitle: "Dialog & Mobitel",
+                                GestureDetector(
+                                  onTap: (){
+                                    PageNavigator(ctx: context)
+                                        .nextPage(page: const EchannelMain());
+                                  },
+                                  child: SpecialServices(
+                                    title: "eChanneling",
+                                    subtitle: "Dialog & Mobitel",
+                                  ),
                                 )
                               ],
                             ),
@@ -449,15 +434,21 @@ class _LandingPageState extends State<LandingPage> {
                                   Border.all(color: Colors.white, width: 1.0),
                             ),
                             child: Row(
-                              children: const <Widget>[
+                              children: <Widget>[
                                 Icon(
                                   Icons.book_sharp,
                                   color: Colors.deepPurple,
                                   size: 40.0,
                                 ),
-                                SpecialServices(
-                                  title: "Loan",
-                                  subtitle: "Dialog & Mobitel",
+                                GestureDetector(
+                                  onTap: (){
+                                    PageNavigator(ctx: context)
+                                        .nextPage(page: const Loans());
+                                  },
+                                  child: SpecialServices(
+                                    title: "Loan",
+                                    subtitle: "Dialog & Mobitel",
+                                  ),
                                 )
                               ],
                             ),
@@ -482,15 +473,21 @@ class _LandingPageState extends State<LandingPage> {
                                   Border.all(color: Colors.white, width: 1.0),
                             ),
                             child: Row(
-                              children: const <Widget>[
+                              children: <Widget>[
                                 Icon(
                                   Icons.code_sharp,
                                   color: Colors.deepPurple,
                                   size: 40.0,
                                 ),
-                                SpecialServices(
-                                  title: "Hot-Lines",
-                                  subtitle: "Dialog & Mobitel",
+                                GestureDetector(
+                                  onTap: (){
+                                    PageNavigator(ctx: context)
+                                        .nextPage(page: const HotLines());
+                                  },
+                                  child: SpecialServices(
+                                    title: "Hot-Lines",
+                                    subtitle: "Dialog & Mobitel",
+                                  ),
                                 )
                               ],
                             ),
@@ -504,7 +501,7 @@ class _LandingPageState extends State<LandingPage> {
                 // Popular Section.............
                 Container(
                   margin: const EdgeInsets.only(
-                      left: 12.0, bottom: 10.0, right: 12.0),
+                      left: 12.0, bottom: 20.0, right: 12.0, top: 20.0),
                   alignment: Alignment.topLeft,
                   child: SectionBreakers(
                     title: 'Special Section',
@@ -534,7 +531,7 @@ class _LandingPageState extends State<LandingPage> {
                 // Mobile Section
                 Container(
                   margin: const EdgeInsets.only(
-                      left: 12.0, bottom: 10.0, right: 12.0, top: 10.0),
+                      left: 12.0, bottom: 20.0, right: 12.0, top: 20.0),
                   alignment: Alignment.topLeft,
                   child: SectionBreakers(
                     title: "Most Popular Section",

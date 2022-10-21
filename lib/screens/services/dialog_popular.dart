@@ -30,18 +30,18 @@ class _DialogPoularListState extends State<DialogPoularList> {
                     margin: const EdgeInsets.all(10.0),
                     padding: const EdgeInsets.all(7.0),
                     decoration: BoxDecoration(
-                        color: Colors.deepPurple,
-                        borderRadius: BorderRadius.circular(12.0),
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(30.0),
                         boxShadow: [
                           BoxShadow(
-                              color: Colors.grey.withOpacity(.5),
-                              blurRadius: 20.0,
+                              color: Colors.black.withOpacity(.5),
+                              blurRadius: 10.0,
                               spreadRadius: 0.0,
                               offset: const Offset(5.0, 5.0)),
                         ]),
-                    child: Center(
+                    child: const Center(
                       child: Image(
-                        image: NetworkImage(popularList[index].image),
+                        image: AssetImage('assets/images/dialog.jpg'),
                       ),
                     ),
                   ),
@@ -51,7 +51,7 @@ class _DialogPoularListState extends State<DialogPoularList> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const <Widget>[
                         Text(
-                          "New What's App package",
+                          "New dialog service",
                           textDirection: TextDirection.ltr,
                           style: TextStyle(
                               fontSize: 15.0,
@@ -90,7 +90,7 @@ class _DialogPoularListState extends State<DialogPoularList> {
                           context: context,
                           builder: (context) => AlertDialog(
                                 title: const Text(
-                                  'Term & Condition 01',
+                                  'SERVICE INFORMATION',
                                   textAlign: TextAlign.justify,
                                 ),
                                 content: SingleChildScrollView(

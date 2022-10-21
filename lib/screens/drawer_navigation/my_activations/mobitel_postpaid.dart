@@ -15,10 +15,7 @@ class _MobitelPostPaidScreenState extends State<MobitelPostPaidScreen> {
       child: Scaffold(
           appBar: AppBar(
             title: const Text("Mobitel postpaid activations"),
-            leading: IconButton(
-              icon: const Icon(Icons.arrow_back_outlined),
-              onPressed: () {},
-            ),
+           centerTitle: true,
            // actions: [IconButton(onPressed: () {}, icon: const Icon(Icons.search))],
           ),
           body: Container(

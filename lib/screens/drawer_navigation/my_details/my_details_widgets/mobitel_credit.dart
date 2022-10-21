@@ -1,3 +1,5 @@
+import 'package:final_project/screens/drawer_navigation/my_details/reload/realod_home.dart';
+import 'package:final_project/screens/drawer_navigation/my_details/transactions/transaction_home.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -45,7 +47,9 @@ class MobitelBalance extends StatelessWidget {
                     borderRadius: BorderRadius.circular(32.0)),
                 minimumSize: const Size(100, 40), //////// HERE
               ),
-              onPressed: () {},
+              onPressed: () {
+                PageNavigator(ctx: context).nextPage(page: TransactionHome());
+              },
               child: const Text('Transactions'),
             ),
             const SizedBox(
@@ -53,7 +57,7 @@ class MobitelBalance extends StatelessWidget {
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                primary: Colors.deepPurple,
+                primary: Colors.grey,
                 onPrimary: Colors.white,
                 shadowColor: Colors.greenAccent,
                 elevation: 3,
@@ -62,7 +66,8 @@ class MobitelBalance extends StatelessWidget {
                 minimumSize: const Size(100, 40), //////// HERE
               ),
               onPressed: () {
-                PageNavigator(ctx: context).nextPage(page: MobitelCreditBalance());
+                // PageNavigator(ctx: context).nextPage(page: MobitelCreditBalance());
+                PageNavigator(ctx: context).nextPage(page: ReloadHome());
               },
               child: const Text('Recharge'),
             ),

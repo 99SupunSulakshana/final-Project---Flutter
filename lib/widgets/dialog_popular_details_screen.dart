@@ -21,7 +21,7 @@ class DialogPopularDetails extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Image.network(package.image),
+              Image.asset("assets/images/dialog.jpg"),
               Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(

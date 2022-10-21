@@ -1,13 +1,18 @@
 // ignore_for_file: non_constant_identifier_names
 
+import 'package:final_project/landing_page.dart';
 import 'package:final_project/screens/DetailsScreen.dart';
+import 'package:final_project/screens/eChanneling/echannelingMain.dart';
 import 'package:final_project/screens/hotlines/hotline_main.dart';
 import 'package:final_project/screens/how_to_guides/main_guides.dart';
 import 'package:final_project/screens/loan_services/loan_main.dart';
 import 'package:final_project/screens/offer/offers_main.dart';
 import 'package:final_project/utils/routers.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../../landing_test.dart';
+import '../authentication/login.dart';
 import '../services/services_main.dart';
 
 class DashBoardCustom extends StatefulWidget {
@@ -49,13 +54,47 @@ class _DashBoardCustomState extends State<DashBoardCustom> {
                     // child:
                     child: PopupMenuButton(
                         itemBuilder: (context) => [
-                              const PopupMenuItem(
+                              PopupMenuItem(
                                 child: Text("Logout"),
                                 value: 1,
+                                onTap: () {
+                                  showDialog(
+                                      context: context,
+                                      builder: (context) => AlertDialog(
+                                        title: const Text(
+                                          'Are You Want Logout?',
+                                          textAlign: TextAlign.justify,
+                                        ),
+                                        content: const Text(
+                                            "It You want to log out this application, press  YES "),
+                                        actions: [
+                                          TextButton(
+                                              onPressed: () {
+                                                // Navigator.pop(context);
+                                                Navigator.of(context)
+                                                    .pushAndRemoveUntil(
+                                                  CupertinoPageRoute(
+                                                      builder: (context) => LoginPage()
+                                                  ),
+                                                      (_) => false,
+                                                );
+                                              },
+                                              child: const Text('YES')),
+                                          TextButton(
+                                              onPressed: () {
+                                                Navigator.pop(context);
+                                              },
+                                              child: const Text('CANCEL')),
+                                        ],
+                                      ));
+                                },
                               ),
-                              const PopupMenuItem(
+                              PopupMenuItem(
                                 child: Text("Home Screen"),
                                 value: 2,
+                                onTap: (){
+                                  PageNavigator(ctx: context).nextPage(page: LandingPage());
+                                },
                               )
                             ]),
                   ),
@@ -88,7 +127,7 @@ class _DashBoardCustomState extends State<DashBoardCustom> {
                     children: <Widget>[
                       CategoryCard(
                         title: "Packages",
-                        Img: "assets/images/png01.png",
+                        Img: "assets/images/customer_packages.png",
                         press: () {
                           PageNavigator(ctx: context)
                               .nextPage(page: const DetailsScreen());
@@ -96,7 +135,7 @@ class _DashBoardCustomState extends State<DashBoardCustom> {
                       ),
                       CategoryCard(
                         title: "Services",
-                        Img: "assets/images/png02.png",
+                        Img: "assets/images/customer_services.png",
                         press: () {
                           PageNavigator(ctx: context)
                               .nextPage(page: const ServiceScreen());
@@ -104,8 +143,11 @@ class _DashBoardCustomState extends State<DashBoardCustom> {
                       ),
                       CategoryCard(
                         title: "E-Channeling",
-                        Img: "assets/images/png03.png",
-                        press: () {},
+                        Img: "assets/images/hospital.png",
+                        press: () {
+                          PageNavigator(ctx: context)
+                              .nextPage(page: const EchannelMain());
+                        },
                       ),
                       CategoryCard(
                         title: "Broadband Services",
@@ -114,7 +156,7 @@ class _DashBoardCustomState extends State<DashBoardCustom> {
                       ),
                       CategoryCard(
                         title: "Loan Services",
-                        Img: "assets/images/png01.png",
+                        Img: "assets/images/loan.png",
                         press: () {
                           PageNavigator(ctx: context)
                               .nextPage(page: const Loans());
@@ -122,7 +164,7 @@ class _DashBoardCustomState extends State<DashBoardCustom> {
                       ),
                       CategoryCard(
                         title: "Offers",
-                        Img: "assets/images/png02.png",
+                        Img: "assets/images/offers.png",
                         press: () {
                           PageNavigator(ctx: context)
                               .nextPage(page: const Offers());
@@ -130,7 +172,7 @@ class _DashBoardCustomState extends State<DashBoardCustom> {
                       ),
                       CategoryCard(
                         title: "Hot Connection Numbers",
-                        Img: "assets/images/png03.png",
+                        Img: "assets/images/codes.png",
                         press: () {
                           PageNavigator(ctx: context)
                               .nextPage(page: const HotLines());
@@ -138,7 +180,7 @@ class _DashBoardCustomState extends State<DashBoardCustom> {
                       ),
                       CategoryCard(
                         title: "How To Guides",
-                        Img: "assets/images/png04.png",
+                        Img: "assets/images/guides.png",
                         press: () {
                           PageNavigator(ctx: context)
                               .nextPage(page: const Guides());

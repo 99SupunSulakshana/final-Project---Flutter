@@ -53,18 +53,18 @@ class _DialogTrendingState extends State<DialogTrending> {
                     margin: const EdgeInsets.all(10.0),
                     padding: const EdgeInsets.all(7.0),
                     decoration: BoxDecoration(
-                        color: Colors.deepPurple,
-                        borderRadius: BorderRadius.circular(12.0),
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(30.0),
                         boxShadow: [
                           BoxShadow(
-                              color: Colors.grey.withOpacity(.5),
-                              blurRadius: 20.0,
+                              color: Colors.black.withOpacity(.5),
+                              blurRadius: 10.0,
                               spreadRadius: 0.0,
                               offset: const Offset(5.0, 5.0)),
                         ]),
                     child: const Center(
                       child: Image(
-                        image: AssetImage('assets/images/png02.png'),
+                        image: AssetImage('assets/images/dialog.jpg'),
                       ),
                     ),
                   ),

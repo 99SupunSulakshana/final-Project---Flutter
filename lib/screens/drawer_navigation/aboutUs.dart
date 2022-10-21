@@ -21,13 +21,7 @@ class _AboutUsState extends State<AboutUs> {
       child: Scaffold(
         appBar: AppBar(
           title: const Text("About Us"),
-          leading: IconButton(
-            icon: const Icon(Icons.arrow_back_outlined),
-            onPressed: () {},
-          ),
-          actions: [
-            // IconButton(onPressed: () {}, icon: const Icon(Icons.search))
-          ],
+          centerTitle: true,
         ),
         body: Stack(children: <Widget>[
           Container(

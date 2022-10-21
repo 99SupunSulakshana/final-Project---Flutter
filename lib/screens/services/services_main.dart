@@ -12,6 +12,8 @@ import 'package:final_project/widgets/search_services.dart';
 import 'package:final_project/widgets/secondary_card.dart';
 import 'package:flutter/material.dart';
 
+import '../../landing_test.dart';
+import '../../utils/routers.dart';
 import '../../widgets/search_user.dart';
 
 class ServiceScreen extends StatefulWidget {
@@ -46,13 +48,19 @@ class _ServiceScreenState extends State<ServiceScreen> {
               ),
               PopupMenuButton(
                   itemBuilder: (context) => [
-                        const PopupMenuItem(
+                         PopupMenuItem(
                           child: Text("Logout"),
                           value: 1,
+                          onTap: (){
+                            PageNavigator(ctx: context).nextPageOnly(page: const LandingTest());
+                          },
                         ),
-                        const PopupMenuItem(
+                        PopupMenuItem(
                           child: Text("Home Screen"),
                           value: 2,
+                          onTap: (){
+                            PageNavigator(ctx: context).nextPageOnly(page: const LandingTest());
+                          },
                         )
                       ]),
             ],
@@ -115,7 +123,7 @@ class _ServiceScreenState extends State<ServiceScreen> {
                             width: 100,
                             margin: const EdgeInsets.only(top: 10.0),
                             decoration: BoxDecoration(
-                                color: Colors.black12,
+                                color: Colors.white,
                                 borderRadius: BorderRadius.circular(10.0)),
                             //child: const HomeView()
                             child: const DialogServices(),
@@ -126,7 +134,7 @@ class _ServiceScreenState extends State<ServiceScreen> {
                           width: 100,
                           margin: const EdgeInsets.only(top: 10.0),
                           decoration: BoxDecoration(
-                              color: Colors.black12,
+                              color: Colors.white,
                               borderRadius: BorderRadius.circular(10.0)),
                           child: const MobitelServices(),
                         )

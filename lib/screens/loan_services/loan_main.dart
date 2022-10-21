@@ -5,6 +5,7 @@ import 'package:final_project/screens/hotlines/hotline_mobitel.dart';
 import 'package:final_project/screens/loan_services/loan_dialog.dart';
 import 'package:final_project/screens/loan_services/loan_mobitel.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Loans extends StatefulWidget {
   const Loans({Key? key}) : super(key: key);
@@ -21,11 +22,9 @@ class _LoansState extends State<Loans> {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text("Loan Services"),
-          leading: IconButton(
-            icon: const Icon(Icons.arrow_back_outlined),
-            onPressed: () {},
-          ),
+          title: Text("Loan Services",
+            style: GoogleFonts.poppins(fontWeight: FontWeight.bold, color: Colors.white),),
+          centerTitle: true,
           actions: [
             // IconButton(onPressed: (){}, icon: const Icon(Icons.search))
           ],

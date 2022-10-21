@@ -19,11 +19,8 @@ class _TermsState extends State<Terms> {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text("Terms And Contions"),
-          leading: IconButton(
-            icon: const Icon(Icons.arrow_back_outlined),
-            onPressed: () {},
-          ),
+          title: const Text("Terms And Conditions"),
+          centerTitle: true,
           actions: [
             // IconButton(onPressed: (){}, icon: const Icon(Icons.search))
           ],

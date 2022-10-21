@@ -18,13 +18,7 @@ class _PrivacyState extends State<Privacy> {
       child: Scaffold(
         appBar: AppBar(
           title: const Text("Privacy And Policy"),
-          leading: IconButton(
-            icon: const Icon(Icons.arrow_back_outlined),
-            onPressed: () {},
-          ),
-          actions: [
-            IconButton(onPressed: () {}, icon: const Icon(Icons.search))
-          ],
+          centerTitle: true,
         ),
         body: Stack(children: <Widget>[
           Container(
